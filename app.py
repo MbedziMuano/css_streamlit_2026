@@ -1,18 +1,29 @@
 import streamlit as st
 
 # Title
-st.title("Physist")
+st.title("🧮 Simple Calculator")
 
-# Inputs
-name = st.text_input("Muano Mbedzi")
-age = st.number_input("--", min_value=0, max_value=120)
-bio = st.text_area("Physist from the univerity of venda")
+# User inputs
+num1 = st.number_input("Enter first number", value=0.0)
+num2 = st.number_input("Enter second number", value=0.0)
 
-# Display
-st.header("Profile Overview")
-if name:
-    st.write(f"**Name:** {name}")
-if age:
-    st.write(f"**Age:** {age}")
-if bio:
-    st.write(f"**Bio:** {bio}")
+# Operation selection
+operation = st.selectbox(
+    "Choose operation",
+    ["Add", "Subtract", "Multiply", "Divide"]
+)
+
+# Calculate button
+if st.button("Calculate"):
+    if operation == "Add":
+        result = num1 + num2
+    elif operation == "Subtract":
+        result = num1 - num2
+    elif operation == "Multiply":
+        result = num1 * num2
+    elif operation == "Divide":
+        if num2 != 0:
+            result = num1 / num2
+        else:
+            result = "Error: Division by zero!"
+    st.success(f"Result: {result}")
