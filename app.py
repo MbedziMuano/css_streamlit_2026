@@ -18,32 +18,37 @@ h2, h3 { color: #1a237e; }
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ South African Hotels with Images ------------------
+# ------------------ Hotels ------------------
 accommodations = pd.DataFrame([
+    # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5, 'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hotels/1/photo/Hilton_Sandton.jpg'],
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5, 'https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg'],
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4, 'https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg'],
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4, 'https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg'],
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3, 'https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg'],
 
+    # Cape Town
     ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5, 'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/exterior.jpg'],
     ['Cape Town', 'Hyatt Regency Cape Town', 'Luxury', 4700, 5, 'https://www.hyatt.com/content/dam/hyatt/hyattdam/images/2019/08/02/1028/Hyatt-Cape-Town.jpg'],
     ['Cape Town', 'The Cape Milner', 'Mid‑range', 2600, 4, 'https://www.thecapemilner.co.za/images/hotel.jpg'],
     ['Cape Town', 'City Lodge V&A Waterfront', 'Mid‑range', 2300, 4, 'https://www.citylodge.co.za/images/vawaterfront.jpg'],
     ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3, 'https://cloud9hotel.co.za/images/cloud9.jpg'],
 
+    # Durban
     ['Durban', 'Southern Sun Elangeni & Maharani', 'Luxury', 3400, 5, 'https://www.tsogosun.com/media/2850/southern-sun-elangeni.jpg'],
     ['Durban', 'The Oyster Box (Umhlanga)', 'Luxury', 4500, 5, 'https://www.oysterbox.co.za/images/hotel.jpg'],
     ['Durban', 'Protea Hotel Umhlanga Ridge', 'Mid‑range', 2400, 4, 'https://www.marriott.com/protea-umhlanga.jpg'],
     ['Durban', 'Garden Court South Beach', 'Mid‑range', 2100, 4, 'https://www.tsogosun.com/media/2810/garden-court-south-beach.jpg'],
     ['Durban', 'City Lodge Hotel Umhlanga Ridge', 'Budget', 1600, 3, 'https://www.citylodge.co.za/images/umhlanga.jpg'],
 
+    # Pretoria
     ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5, 'https://www.marriott.com/sheraton-pretoria.jpg'],
     ['Pretoria', 'The Capital Menlyn Maine', 'Mid‑range', 2500, 4, 'https://www.capitalhotels.co.za/images/menlyn.jpg'],
     ['Pretoria', 'City Lodge Hotel Lynnwood', 'Mid‑range', 2300, 4, 'https://www.citylodge.co.za/images/lynnwood.jpg'],
     ['Pretoria', 'Protea Hotel Hatfield', 'Budget', 1800, 3, 'https://www.marriott.com/protea-hatfield.jpg'],
     ['Pretoria', 'Apogee Boutique Hotel & Spa', 'Luxury', 3800, 5, 'https://www.apogeehotel.co.za/images/hotel.jpg'],
 
+    # Port Elizabeth
     ['Port Elizabeth', 'No5 Boutique Hotel By Mantis', 'Luxury', 3300, 5, 'https://www.mantiscollection.com/no5-boutique-hotel.jpg'],
     ['Port Elizabeth', 'Radisson Blu Hotel PE', 'Luxury', 3100, 5, 'https://www.radissonhotels.com/pe-radisson.jpg'],
     ['Port Elizabeth', 'Protea Hotel Port Elizabeth', 'Mid‑range', 2300, 4, 'https://www.marriott.com/protea-pe.jpg'],
@@ -51,7 +56,7 @@ accommodations = pd.DataFrame([
     ['Port Elizabeth', 'Beachview Guesthouse', 'Budget', 1600, 3, 'https://www.beachviewguesthouse.co.za/images/guesthouse.jpg']
 ], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URL'])
 
-# ------------------ Mock Buses ------------------
+# ------------------ Buses ------------------
 buses = pd.DataFrame([
     ['Johannesburg to Cape Town', '08:00', 16, 800, 20],
     ['Cape Town to Durban', '09:30', 20, 950, 15],
@@ -74,7 +79,6 @@ if page == "Accommodations":
     check_out = st.date_input("Check-out Date", min_value=check_in)
     guests = st.number_input("Number of Guests", min_value=1, max_value=10, value=1)
 
-    # Filter hotels by city
     available_accom = accommodations[accommodations['Location']==location]
     if not available_accom.empty:
         st.subheader("Available Hotels")
@@ -140,32 +144,36 @@ elif page == "Cancel Booking":
     st.header("❌ Cancel Booking")
     booking_type = st.radio("Select Booking Type", ["Accommodation", "Bus"])
 
-    if booking_type=="Accommodation":
+    if booking_type == "Accommodation":
         try:
             df = pd.read_csv("accommodation_bookings.csv")
-            name_list = df["Name"].unique().tolist()
-            selected_name = st.selectbox("Select Your Name", name_list)
-            user_bookings = df[df["Name"]==selected_name]
-            st.write(user_bookings)
-            to_cancel = st.selectbox("Select Hotel to Cancel", user_bookings["Hotel"])
-            if st.button("Cancel Accommodation Booking"):
-                df = df.drop(user_bookings[user_bookings["Hotel"]==to_cancel].index)
-                df.to_csv("accommodation_bookings.csv", index=False)
-                st.success("Booking cancelled successfully!")
+            if df.empty: st.warning("No accommodation bookings found.")
+            else:
+                name_list = df["Name"].unique().tolist()
+                selected_name = st.selectbox("Select Your Name", name_list)
+                user_bookings = df[df["Name"]==selected_name]
+                st.write(user_bookings)
+                to_cancel = st.selectbox("Select Hotel to Cancel", user_bookings["Hotel"])
+                if st.button("Cancel Accommodation Booking"):
+                    df = df.drop(user_bookings[user_bookings["Hotel"]==to_cancel].index)
+                    df.to_csv("accommodation_bookings.csv", index=False)
+                    st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
         except FileNotFoundError:
-            st.warning("No accommodation bookings found.")
+            st.warning("No accommodation bookings file found.")
 
     else:
         try:
             df = pd.read_csv("bus_bookings.csv")
-            name_list = df["Name"].unique().tolist()
-            selected_name = st.selectbox("Select Your Name", name_list)
-            user_bookings = df[df["Name"]==selected_name]
-            st.write(user_bookings)
-            to_cancel = st.selectbox("Select Route to Cancel", user_bookings["Route"])
-            if st.button("Cancel Bus Booking"):
-                df = df.drop(user_bookings[user_bookings["Route"]==to_cancel].index)
-                df.to_csv("bus_bookings.csv", index=False)
-                st.success("Booking cancelled successfully!")
+            if df.empty: st.warning("No bus bookings found.")
+            else:
+                name_list = df["Name"].unique().tolist()
+                selected_name = st.selectbox("Select Your Name", name_list)
+                user_bookings = df[df["Name"]==selected_name]
+                st.write(user_bookings)
+                to_cancel = st.selectbox("Select Route to Cancel", user_bookings["Route"])
+                if st.button("Cancel Bus Booking"):
+                    df = df.drop(user_bookings[user_bookings["Route"]==to_cancel].index)
+                    df.to_csv("bus_bookings.csv", index=False)
+                    st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
         except FileNotFoundError:
-            st.warning("No bus bookings found.")
+            st.warning("No bus bookings file found.")
