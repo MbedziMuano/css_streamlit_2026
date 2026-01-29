@@ -1,47 +1,48 @@
 import streamlit as st
 
-st.set_page_config(page_title="Real Number Calculator", page_icon="ℝ")
+st.set_page_config(page_title="Calculator", page_icon="🧮")
 
-st.title("ℝ Real Number Calculator")
-st.write("This calculator works with **all real numbers** (positive, negative, and decimals).")
+st.title("🧮 Calculator (All Real Numbers ℝ)")
 
-# Input real numbers
-a = st.number_input(
-    "Enter first real number (ℝ)",
-    value=0.0,
-    step=0.000001,
-    format="%.12f"
+# ✅ SAFE initialization (dictionary style)
+if "current" not in st.session_state:
+    st.session_state["current"] = ""
+
+# Display
+st.text_input(
+    "Display",
+    value=st.session_state["current"],
+    disabled=True
 )
 
-b = st.number_input(
-    "Enter second real number (ℝ)",
-    value=0.0,
-    step=0.000001,
-    format="%.12f"
-)
+# Button logic
+def press(value):
+    if value == "C":
+        st.session_state["current"] = ""
+    elif value == "=":
+        try:
+            expr = (
+                st.session_state["current"]
+                .replace("×", "*")
+                .replace("÷", "/")
+            )
+            st.session_state["current"] = str(eval(expr))
+        except:
+            st.session_state["current"] = "Error"
+    else:
+        st.session_state["current"] += value
 
-# Operation selection
-operation = st.radio(
-    "Select operation",
-    ["+", "−", "×", "÷"]
-)
+# Layout
+buttons = [
+    ["7", "8", "9", "+"],
+    ["4", "5", "6", "-"],
+    ["1", "2", "3", "×"],
+    ["0", ".", "=", "÷"],
+    ["C"]
+]
 
-# Compute result
-if st.button("Calculate"):
-    try:
-        if operation == "+":
-            result = a + b
-        elif operation == "−":
-            result = a - b
-        elif operation == "×":
-            result = a * b
-        elif operation == "÷":
-            if b == 0:
-                st.error("Division by zero is undefined in ℝ ❌")
-                st.stop()
-            result = a / b
-
-        st.success(f"**Result:** {result}")
-
-    except Exception as e:
-        st.error(f"Error: {e}")
+for row in buttons:
+    cols = st.columns(len(row))
+    for i, b in enumerate(row):
+        if cols[i].button(b):
+            press(b)
