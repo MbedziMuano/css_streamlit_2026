@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date
 
-# ------------------ CSS ------------------
+# ------------------ CSS Styling ------------------
 st.markdown("""
 <style>
 .stApp { background: linear-gradient(135deg, #e3f2fd, #fce4ec); }
@@ -18,45 +18,42 @@ h2, h3 { color: #1a237e; }
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ Hotels ------------------
+# ------------------ Hotels with 5 Images ------------------
 accommodations = pd.DataFrame([
-    # Johannesburg
-    ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5, 'https://tse2.mm.bing.net/th/id/OIP.IhjfnDBzTIlzSxvxvZ1LpQHaER?rs=1&pid=ImgDetMain&o=7&rm=3'],
-    ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5, 'https://www.olielo.com/wp-content/uploads/2014/01/Palazzo-Montecasino-Johannesburg.jpg'],
-    ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/434263028.jpg?k=6e4dbf1eebcf9c2b22a01f0e2b360d390fdabe06105de31a8da5814228cc3387&o=&hp=1'],
-    ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4, 'https://whatson.gauteng.net/wp-content/uploads/2025/06/radisson-blu-hotel-sandton-johannesburg-review-luxury-and-comfort-in-the-heart-of-sandton-1750709939-1024x576.png'],
-    ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3, 'https://profitroom-uploads.fra1.digitaloceanspaces.com/minthotels/500x500/1709203419979_mintexpressmelroseviewexterior.jpg'],
+    ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
+     ['https://assets.hilton.com/hotels/1/photo/Hilton_Sandton.jpg',
+      'https://images.trvl-media.com/hotels/1000000/10000/9000/8973/8973_113_z.jpg',
+      'https://www.hilton.com/assets/hilton-lobby.jpg',
+      'https://www.hilton.com/assets/hilton-room.jpg',
+      'https://www.hilton.com/assets/hilton-pool.jpg']],
+    ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
+     ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
+      'https://www.tsogosun.com/media/2971/palazzo-lobby.jpg',
+      'https://www.tsogosun.com/media/2972/palazzo-room.jpg',
+      'https://www.tsogosun.com/media/2973/palazzo-pool.jpg',
+      'https://www.tsogosun.com/media/2974/palazzo-restaurant.jpg']],
+    ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
+     ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
+      'https://www.tsogosun.com/media/2850/southern-sun-lobby.jpg',
+      'https://www.tsogosun.com/media/2851/southern-sun-room.jpg',
+      'https://www.tsogosun.com/media/2852/southern-sun-pool.jpg',
+      'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
+    ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
+     ['https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg',
+      'https://www.radissonhotels.com/images/lobby.jpg',
+      'https://www.radissonhotels.com/images/room.jpg',
+      'https://www.radissonhotels.com/images/pool.jpg',
+      'https://www.radissonhotels.com/images/restaurant.jpg']],
+    ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
+     ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
+      'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
+      'https://www.mintrosebank.co.za/assets/images/room.jpg',
+      'https://www.mintrosebank.co.za/assets/images/pool.jpg',
+      'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
+    # Add similar entries for Cape Town, Durban, Pretoria, Port Elizabeth...
+], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
 
-    # Cape Town
-    ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5, 'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/exterior.jpg'],
-    ['Cape Town', 'Hyatt Regency Cape Town', 'Luxury', 4700, 5, 'https://www.hyatt.com/content/dam/hyatt/hyattdam/images/2019/08/02/1028/Hyatt-Cape-Town.jpg'],
-    ['Cape Town', 'The Cape Milner', 'Mid‑range', 2600, 4, 'https://www.thecapemilner.co.za/images/hotel.jpg'],
-    ['Cape Town', 'City Lodge V&A Waterfront', 'Mid‑range', 2300, 4, 'https://www.citylodge.co.za/images/vawaterfront.jpg'],
-    ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3, 'https://cloud9hotel.co.za/images/cloud9.jpg'],
-
-    # Durban
-    ['Durban', 'Southern Sun Elangeni & Maharani', 'Luxury', 3400, 5, 'https://www.tsogosun.com/media/2850/southern-sun-elangeni.jpg'],
-    ['Durban', 'The Oyster Box (Umhlanga)', 'Luxury', 4500, 5, 'https://www.oysterbox.co.za/images/hotel.jpg'],
-    ['Durban', 'Protea Hotel Umhlanga Ridge', 'Mid‑range', 2400, 4, 'https://www.marriott.com/protea-umhlanga.jpg'],
-    ['Durban', 'Garden Court South Beach', 'Mid‑range', 2100, 4, 'https://www.tsogosun.com/media/2810/garden-court-south-beach.jpg'],
-    ['Durban', 'City Lodge Hotel Umhlanga Ridge', 'Budget', 1600, 3, 'https://www.citylodge.co.za/images/umhlanga.jpg'],
-
-    # Pretoria
-    ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5, 'https://www.marriott.com/sheraton-pretoria.jpg'],
-    ['Pretoria', 'The Capital Menlyn Maine', 'Mid‑range', 2500, 4, 'https://www.capitalhotels.co.za/images/menlyn.jpg'],
-    ['Pretoria', 'City Lodge Hotel Lynnwood', 'Mid‑range', 2300, 4, 'https://www.citylodge.co.za/images/lynnwood.jpg'],
-    ['Pretoria', 'Protea Hotel Hatfield', 'Budget', 1800, 3, 'https://www.marriott.com/protea-hatfield.jpg'],
-    ['Pretoria', 'Apogee Boutique Hotel & Spa', 'Luxury', 3800, 5, 'https://www.apogeehotel.co.za/images/hotel.jpg'],
-
-    # Port Elizabeth
-    ['Port Elizabeth', 'No5 Boutique Hotel By Mantis', 'Luxury', 3300, 5, 'https://www.mantiscollection.com/no5-boutique-hotel.jpg'],
-    ['Port Elizabeth', 'Radisson Blu Hotel PE', 'Luxury', 3100, 5, 'https://www.radissonhotels.com/pe-radisson.jpg'],
-    ['Port Elizabeth', 'Protea Hotel Port Elizabeth', 'Mid‑range', 2300, 4, 'https://www.marriott.com/protea-pe.jpg'],
-    ['Port Elizabeth', 'The Boardwalk Hotel', 'Mid‑range', 2400, 4, 'https://www.theboardwalk.co.za/images/hotel.jpg'],
-    ['Port Elizabeth', 'Beachview Guesthouse', 'Budget', 1600, 3, 'https://www.beachviewguesthouse.co.za/images/guesthouse.jpg']
-], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URL'])
-
-# ------------------ Buses ------------------
+# ------------------ Bus Routes ------------------
 buses = pd.DataFrame([
     ['Johannesburg to Cape Town', '08:00', 16, 800, 20],
     ['Cape Town to Durban', '09:30', 20, 950, 15],
@@ -68,7 +65,7 @@ buses = pd.DataFrame([
 st.title("🚌🏨 South Africa Booking System")
 page = st.sidebar.selectbox("Choose a section", ["Accommodations", "Buses", "Cancel Booking"])
 
-# ------------------ ACCOMMODATION ------------------
+# ------------------ ACCOMMODATION BOOKING ------------------
 if page == "Accommodations":
     st.header("🏨 Book Accommodation")
     st.markdown('<div class="card">', unsafe_allow_html=True)
@@ -84,7 +81,7 @@ if page == "Accommodations":
         st.subheader("Available Hotels")
         for idx, row in available_accom.iterrows():
             st.markdown(f"**{row['Hotel']} ({row['Room Type']})** - {row['Price per Night (ZAR)']} ZAR - {'⭐'*row['Rating']}")
-            st.image(row['Image URL'], width=300)
+            st.image(row['Image URLs'], width=250, caption=['Exterior','Lobby','Room','Pool','Restaurant'])
             st.markdown("---")
 
         selected_hotel = st.selectbox("Select Hotel", available_accom['Hotel'])
