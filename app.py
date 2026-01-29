@@ -21,7 +21,7 @@ h2, h3 { color: #1a237e; }
 # ------------------ Hotels ------------------
 accommodations = pd.DataFrame([
     # Johannesburg
-    ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5, 'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hotels/1/photo/Hilton_Sandton.jpg'],
+    ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5, 'https://tse2.mm.bing.net/th/id/OIP.IhjfnDBzTIlzSxvxvZ1LpQHaER?rs=1&pid=ImgDetMain&o=7&rm=3'],
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5, 'https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg'],
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4, 'https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg'],
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4, 'https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg'],
