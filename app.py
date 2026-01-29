@@ -22,11 +22,17 @@ h2, h3 { color: #1a237e; }
 accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
-     ['https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_exterior.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_lobby.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_room.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_pool.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_restaurant.jpg']],
+     ['https://stories-editor.hilton.com/emea/wp-content/uploads/sites/2/2025/01/Hampton-by-Hilton-Sandton-Grayston-Exterior.jpg?w=1080&q=75','https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/e2/12/d6/exterior-view-of-hilton.jpg?w=800&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/53/f2/71/hilton-sandton.jpg?w=2000&h=-1&s=1',
+      'https://s.inyourpocket.com/gallery/johannesburg/2023/05/IMG-8667%20(1).jpg',
+      'https://c8.alamy.com/comp/B0619F/africa-south-africa-gauteng-johannesburg-sandton-hilton-hotel-lobby-B0619F.jpg',
+      'https://milelion.com/wp-content/uploads/2016/06/P6020561.jpg',
+      'https://images.squarespace-cdn.com/content/v1/56ae6acce707eb68493a0759/1500397154312-HU5NSBN8AL75YS6RX2RX/Interior+Lobby.jpg',
+      'https://pix10.agoda.net/hotelImages/79114/0/9e650dc2329bf94834ebb597e318365d.jpg?ca=0&ce=1&s=1024x768',
+      'https://pix10.agoda.net/hotelImages/79114/-1/5786dcbf35bf28e38cd72e2dd14f06e0.jpg?ca=19&ce=1&s=1024x768',
+      'https://hiltonsandton.hotels-johannesburg.com/data/Images/OriginalPhoto/15478/1547854/1547854171/johannesburg-hilton-sandton-hotel-image-17.JPEG',
+      'https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/492628325.jpg?k=760b34bce7f616765cb6cddbb034d9020dcabc0f32911e4e0dc5172149f88196&o=',
+      'https://www.thesyrene.co.za/wp-content/uploads/2023/05/Deluxe-Bathroom.jpg']],
 
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
      ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
