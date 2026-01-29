@@ -64,22 +64,53 @@ h2, h3 {
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ MOCK DATA (SOUTH AFRICA) ------------------
-accommodations = pd.DataFrame({
-    'Location': ['Johannesburg', 'Cape Town', 'Durban', 'Pretoria', 'Port Elizabeth'],
-    'Hotel': ['The Michelangelo', 'Table Bay Hotel', 'Protea Hotel Durban', 'Sheraton Pretoria', 'Radisson Blu PE'],
-    'Room Type': ['Standard', 'Deluxe', 'Suite', 'Standard', 'Deluxe'],
-    'Price per Night (ZAR)': [2500, 3000, 1800, 2200, 2000],
-    'Availability': [True, True, True, False, True]
-})
+# ------------------ MOCK DATA (SOUTH AFRICA HOTELS) ------------------
+accommodations = pd.DataFrame([
+    # Johannesburg
+    ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5],
+    ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5],
+    ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4],
+    ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4],
+    ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3],
 
-buses = pd.DataFrame({
-    'Route': ['Johannesburg to Cape Town', 'Cape Town to Durban', 'Durban to Pretoria', 'Pretoria to Port Elizabeth'],
-    'Departure Time': ['08:00', '09:30', '12:00', '14:00'],
-    'Duration (hours)': [16, 20, 12, 14],
-    'Price per Seat (ZAR)': [800, 950, 700, 850],
-    'Seats Available': [20, 15, 0, 10]
-})
+    # Cape Town
+    ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5],
+    ['Cape Town', 'Hyatt Regency Cape Town', 'Luxury', 4700, 5],
+    ['Cape Town', 'The Cape Milner', 'Mid‑range', 2600, 4],
+    ['Cape Town', 'City Lodge V&A Waterfront', 'Mid‑range', 2300, 4],
+    ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3],
+
+    # Durban
+    ['Durban', 'Southern Sun Elangeni & Maharani', 'Luxury', 3400, 5],
+    ['Durban', 'The Oyster Box (Umhlanga)', 'Luxury', 4500, 5],
+    ['Durban', 'Protea Hotel Umhlanga Ridge', 'Mid‑range', 2400, 4],
+    ['Durban', 'Garden Court South Beach', 'Mid‑range', 2100, 4],
+    ['Durban', 'City Lodge Hotel Umhlanga Ridge', 'Budget', 1600, 3],
+
+    # Pretoria
+    ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5],
+    ['Pretoria', 'The Capital Menlyn Maine', 'Mid‑range', 2500, 4],
+    ['Pretoria', 'City Lodge Hotel Lynnwood', 'Mid‑range', 2300, 4],
+    ['Pretoria', 'Protea Hotel Hatfield', 'Budget', 1800, 3],
+    ['Pretoria', 'Apogee Boutique Hotel & Spa', 'Luxury', 3800, 5],
+
+    # Port Elizabeth
+    ['Port Elizabeth', 'No5 Boutique Hotel By Mantis', 'Luxury', 3300, 5],
+    ['Port Elizabeth', 'Radisson Blu Hotel PE', 'Luxury', 3100, 5],
+    ['Port Elizabeth', 'Protea Hotel Port Elizabeth', 'Mid‑range', 2300, 4],
+    ['Port Elizabeth', 'The Boardwalk Hotel', 'Mid‑range', 2400, 4],
+    ['Port Elizabeth', 'Beachview Guesthouse', 'Budget', 1600, 3],
+],
+columns=['Location', 'Hotel', 'Room Type', 'Price per Night (ZAR)', 'Rating'])
+
+# ------------------ MOCK DATA (Buses) ------------------
+buses = pd.DataFrame([
+    ['Johannesburg to Cape Town', '08:00', 16, 800, 20],
+    ['Cape Town to Durban', '09:30', 20, 950, 15],
+    ['Durban to Pretoria', '12:00', 12, 700, 0],
+    ['Pretoria to Port Elizabeth', '14:00', 14, 850, 10],
+],
+columns=['Route', 'Departure Time', 'Duration (hours)', 'Price per Seat (ZAR)', 'Seats Available'])
 
 # ------------------ TITLE AND NAVIGATION ------------------
 st.title("🚌🏨 South Africa Booking System")
@@ -99,13 +130,15 @@ if page == "Accommodations":
 
     # Filter available accommodations
     available_accom = accommodations[
-        (accommodations['Location'] == location) &
-        (accommodations['Availability'])
+        (accommodations['Location'] == location)
     ]
 
     if not available_accom.empty:
+        # Display hotels with ratings
+        available_accom_display = available_accom.copy()
+        available_accom_display['Rating'] = available_accom_display['Rating'].apply(lambda x: '⭐'*x)
         st.subheader("Available Hotels")
-        st.dataframe(available_accom, use_container_width=True)
+        st.dataframe(available_accom_display, use_container_width=True)
 
         selected_hotel = st.selectbox("Select Hotel", available_accom['Hotel'])
 
