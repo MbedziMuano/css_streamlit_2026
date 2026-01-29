@@ -22,10 +22,10 @@ h2, h3 { color: #1a237e; }
 accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5, 'https://tse2.mm.bing.net/th/id/OIP.IhjfnDBzTIlzSxvxvZ1LpQHaER?rs=1&pid=ImgDetMain&o=7&rm=3'],
-    ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5, 'https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg'],
-    ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4, 'https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg'],
-    ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4, 'https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg'],
-    ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3, 'https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg'],
+    ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5, 'https://www.olielo.com/wp-content/uploads/2014/01/Palazzo-Montecasino-Johannesburg.jpg'],
+    ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4, 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/434263028.jpg?k=6e4dbf1eebcf9c2b22a01f0e2b360d390fdabe06105de31a8da5814228cc3387&o=&hp=1'],
+    ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4, 'https://whatson.gauteng.net/wp-content/uploads/2025/06/radisson-blu-hotel-sandton-johannesburg-review-luxury-and-comfort-in-the-heart-of-sandton-1750709939-1024x576.png'],
+    ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3, 'https://profitroom-uploads.fra1.digitaloceanspaces.com/minthotels/500x500/1709203419979_mintexpressmelroseviewexterior.jpg'],
 
     # Cape Town
     ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5, 'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/exterior.jpg'],
