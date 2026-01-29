@@ -1,76 +1,71 @@
 import streamlit as st
-import math
+import pandas as pd
+from datetime import date
 
-st.set_page_config(page_title="Scientific Calculator", page_icon="🧮")
+# Mock data for accommodations (hotels/rooms)
+accommodations = pd.DataFrame({
+    'Location': ['New York', 'Los Angeles', 'Chicago', 'Miami'],
+    'Hotel': ['City Inn', 'Beach Resort', 'Urban Suites', 'Sun Hotel'],
+    'Room Type': ['Standard', 'Deluxe', 'Suite', 'Economy'],
+    'Price per Night (USD)': [150, 200, 250, 120],
+    'Availability': [True, True, False, True]  # Simulate some unavailable
+})
 
-# 🔹 Custom CSS to make buttons close together
-st.markdown("""
-<style>
-div.stButton > button {
-    width: 100%;
-    padding: 0.3em;
-    margin: 0.1em 0;
-    font-size: 16px;
-}
-div[data-testid="column"] {
-    padding: 0.05rem;
-}
-</style>
-""", unsafe_allow_html=True)
+# Mock data for buses
+buses = pd.DataFrame({
+    'Route': ['NY to LA', 'LA to Chicago', 'Chicago to Miami', 'Miami to NY'],
+    'Departure Time': ['08:00 AM', '10:00 AM', '12:00 PM', '02:00 PM'],
+    'Duration (hours)': [48, 24, 30, 36],
+    'Price per Seat (USD)': [100, 80, 90, 110],
+    'Seats Available': [20, 15, 0, 10]  # Simulate some full
+})
 
-st.title("🧮 Scientific Calculator (ℝ)")
+# App title and sidebar navigation
+st.title("Booking Site for Accommodations and Buses")
+page = st.sidebar.selectbox("Choose a section", ["Accommodations", "Buses"])
 
-# ✅ Safe session state initialization
-if "expr" not in st.session_state:
-    st.session_state["expr"] = ""
-
-# Display
-st.text_input(
-    "Display",
-    value=st.session_state["expr"],
-    disabled=True
-)
-
-# Button logic
-def press(val):
-    if val == "C":
-        st.session_state["expr"] = ""
-    elif val == "=":
-        try:
-            expr = st.session_state["expr"]
-            expr = expr.replace("×", "*").replace("÷", "/")
-            expr = expr.replace("π", "math.pi").replace("e", "math.e")
-            st.session_state["expr"] = str(eval(expr))
-        except:
-            st.session_state["expr"] = "Error"
-    elif val == "√":
-        st.session_state["expr"] += "math.sqrt("
-    elif val == "x²":
-        st.session_state["expr"] += "**2"
-    elif val == "sin":
-        st.session_state["expr"] += "math.sin("
-    elif val == "cos":
-        st.session_state["expr"] += "math.cos("
-    elif val == "tan":
-        st.session_state["expr"] += "math.tan("
-    elif val == "log":
-        st.session_state["expr"] += "math.log10("
+if page == "Accommodations":
+    st.header("Book Accommodations")
+    
+    # Filters
+    location = st.selectbox("Select Location", accommodations['Location'].unique())
+    check_in = st.date_input("Check-in Date", min_value=date.today())
+    check_out = st.date_input("Check-out Date", min_value=check_in)
+    guests = st.number_input("Number of Guests", min_value=1, max_value=10, value=1)
+    
+    # Filter available accommodations
+    available_accom = accommodations[(accommodations['Location'] == location) & (accommodations['Availability'])]
+    
+    if not available_accom.empty:
+        st.subheader("Available Options")
+        st.dataframe(available_accom)
+        
+        selected_hotel = st.selectbox("Select Hotel", available_accom['Hotel'])
+        if st.button("Book Now"):
+            nights = (check_out - check_in).days
+            total_price = available_accom[available_accom['Hotel'] == selected_hotel]['Price per Night (USD)'].values[0] * nights
+            st.success(f"Booking confirmed for {selected_hotel} in {location}! Total: ${total_price} for {nights} nights and {guests} guests.")
     else:
-        st.session_state["expr"] += val
+        st.warning("No accommodations available in this location.")
 
-# Button layout (compact grid)
-buttons = [
-    ["sin", "cos", "tan", "log"],
-    ["√", "x²", "π", "e"],
-    ["7", "8", "9", "+"],
-    ["4", "5", "6", "-"],
-    ["1", "2", "3", "×"],
-    ["0", ".", "=", "÷"],
-    ["C"]
-]
-
-for row in buttons:
-    cols = st.columns(len(row), gap="small")
-    for i, b in enumerate(row):
-        if cols[i].button(b):
-            press(b)
+elif page == "Buses":
+    st.header("Book Bus Tickets")
+    
+    # Filters
+    route = st.selectbox("Select Route", buses['Route'].unique())
+    travel_date = st.date_input("Travel Date", min_value=date.today())
+    passengers = st.number_input("Number of Passengers", min_value=1, max_value=10, value=1)
+    
+    # Filter available buses
+    available_buses = buses[(buses['Route'] == route) & (buses['Seats Available'] >= passengers)]
+    
+    if not available_buses.empty:
+        st.subheader("Available Buses")
+        st.dataframe(available_buses)
+        
+        selected_bus = st.selectbox("Select Bus (by Departure Time)", available_buses['Departure Time'])
+        if st.button("Book Now"):
+            total_price = available_buses[available_buses['Departure Time'] == selected_bus]['Price per Seat (USD)'].values[0] * passengers
+            st.success(f"Booking confirmed for {route} bus at {selected_bus}! Total: ${total_price} for {passengers} passengers on {travel_date}.")
+    else:
+        st.warning("No buses available for this route or insufficient seats.")
