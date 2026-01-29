@@ -18,14 +18,15 @@ h2, h3 { color: #1a237e; }
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------ Hotels with 5 Images ------------------
+# ------------------ Hotels Data ------------------
 accommodations = pd.DataFrame([
+    # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
-     ['https://assets.hilton.com/hotels/1/photo/Hilton_Sandton.jpg',
-      'https://images.trvl-media.com/hotels/1000000/10000/9000/8973/8973_113_z.jpg',
-      'https://www.hilton.com/assets/hilton-lobby.jpg',
-      'https://www.hilton.com/assets/hilton-room.jpg',
-      'https://www.hilton.com/assets/hilton-pool.jpg']],
+     ['https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_exterior.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_lobby.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_room.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_pool.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_restaurant.jpg']],
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
      ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
       'https://www.tsogosun.com/media/2971/palazzo-lobby.jpg',
@@ -40,17 +41,48 @@ accommodations = pd.DataFrame([
       'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
      ['https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg',
-      'https://www.radissonhotels.com/images/lobby.jpg',
-      'https://www.radissonhotels.com/images/room.jpg',
-      'https://www.radissonhotels.com/images/pool.jpg',
-      'https://www.radissonhotels.com/images/restaurant.jpg']],
+      'https://www.radissonhotels.com/en-us/images/sandton-lobby.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-room.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-pool.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-restaurant.jpg']],
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
      ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
       'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
       'https://www.mintrosebank.co.za/assets/images/room.jpg',
       'https://www.mintrosebank.co.za/assets/images/pool.jpg',
       'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
-    # Add similar entries for Cape Town, Durban, Pretoria, Port Elizabeth...
+
+    # Cape Town
+    ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
+     ['https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/exterior.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/lobby.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/room.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/pool.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/restaurant.jpg']],
+    ['Cape Town', 'Hyatt Regency Cape Town', 'Luxury', 4700, 5,
+     ['https://www.hyatt.com/content/dam/hyatt/hyattdam/images/2019/08/02/1028/Hyatt-Cape-Town.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-lobby.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-room.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-pool.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-restaurant.jpg']],
+    ['Cape Town', 'The Cape Milner', 'Mid‑range', 2600, 4,
+     ['https://www.thecapemilner.co.za/images/hotel.jpg',
+      'https://www.thecapemilner.co.za/images/lobby.jpg',
+      'https://www.thecapemilner.co.za/images/room.jpg',
+      'https://www.thecapemilner.co.za/images/pool.jpg',
+      'https://www.thecapemilner.co.za/images/restaurant.jpg']],
+    ['Cape Town', 'City Lodge V&A Waterfront', 'Mid‑range', 2300, 4,
+     ['https://www.citylodge.co.za/images/vawaterfront.jpg',
+      'https://www.citylodge.co.za/images/lobby.jpg',
+      'https://www.citylodge.co.za/images/room.jpg',
+      'https://www.citylodge.co.za/images/pool.jpg',
+      'https://www.citylodge.co.za/images/restaurant.jpg']],
+    ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3,
+     ['https://cloud9hotel.co.za/images/cloud9.jpg',
+      'https://cloud9hotel.co.za/images/lobby.jpg',
+      'https://cloud9hotel.co.za/images/room.jpg',
+      'https://cloud9hotel.co.za/images/pool.jpg',
+      'https://cloud9hotel.co.za/images/restaurant.jpg']]
 ], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
 
 # ------------------ Bus Routes ------------------
@@ -61,116 +93,77 @@ buses = pd.DataFrame([
     ['Pretoria to Port Elizabeth', '14:00', 14, 850, 10]
 ], columns=['Route','Departure Time','Duration (hours)','Price per Seat (ZAR)','Seats Available'])
 
-# ------------------ App ------------------
+# ------------------ Booking Section ------------------
 st.title("🚌🏨 South Africa Booking System")
 page = st.sidebar.selectbox("Choose a section", ["Accommodations", "Buses", "Cancel Booking"])
 
-# ------------------ ACCOMMODATION BOOKING ------------------
-if page == "Accommodations":
-    st.header("🏨 Book Accommodation")
-    st.markdown('<div class="card">', unsafe_allow_html=True)
+# For simplicity, we store current bookings in session state
+if 'accom_booking' not in st.session_state: st.session_state.accom_booking = None
+if 'bus_booking' not in st.session_state: st.session_state.bus_booking = None
 
-    name = st.text_input("Full Name")
+# ------------------ Accommodation Booking ------------------
+if page == "Accommodations":
+    st.header("Book Accommodations")
     location = st.selectbox("Select City", accommodations['Location'].unique())
     check_in = st.date_input("Check-in Date", min_value=date.today())
     check_out = st.date_input("Check-out Date", min_value=check_in)
     guests = st.number_input("Number of Guests", min_value=1, max_value=10, value=1)
-
-    available_accom = accommodations[accommodations['Location']==location]
+    
+    available_accom = accommodations[accommodations['Location'] == location]
+    
     if not available_accom.empty:
         st.subheader("Available Hotels")
-        for idx, row in available_accom.iterrows():
-            st.markdown(f"**{row['Hotel']} ({row['Room Type']})** - {row['Price per Night (ZAR)']} ZAR - {'⭐'*row['Rating']}")
-            st.image(row['Image URLs'], width=250, caption=['Exterior','Lobby','Room','Pool','Restaurant'])
-            st.markdown("---")
-
-        selected_hotel = st.selectbox("Select Hotel", available_accom['Hotel'])
-
-        if st.button("Confirm Accommodation Booking"):
-            nights = (check_out - check_in).days
-            if not name: st.error("Please enter your name.")
-            elif nights <= 0: st.error("Check-out must be after check-in.")
-            else:
-                price = available_accom[available_accom['Hotel']==selected_hotel]['Price per Night (ZAR)'].values[0]
-                total_price = price * nights
-                booking = pd.DataFrame([{
-                    "Name": name, "Hotel": selected_hotel, "City": location,
-                    "Guests": guests, "Check-in": check_in, "Check-out": check_out,
-                    "Total Price (ZAR)": total_price
-                }])
-                booking.to_csv("accommodation_bookings.csv", mode="a", index=False, header=not pd.io.common.file_exists("accommodation_bookings.csv"))
-                st.success("✅ Accommodation booking confirmed!")
-                st.write(booking)
+        for idx, hotel in available_accom.iterrows():
+            with st.container():
+                st.markdown(f"### {hotel['Hotel']} ({hotel['Room Type']})")
+                st.markdown(f"**Rating:** {'⭐'*hotel['Rating']}  | **Price/Night:** R{hotel['Price per Night (ZAR)']}")
+                cols = st.columns(5)
+                for i, col in enumerate(cols):
+                    col.image(hotel['Image URLs'][i], use_column_width=True)
+                if st.button(f"Book {hotel['Hotel']}"):
+                    nights = (check_out - check_in).days
+                    total_price = hotel['Price per Night (ZAR)'] * nights
+                    st.session_state.accom_booking = {
+                        'Hotel': hotel['Hotel'], 'City': location, 'Nights': nights, 'Guests': guests, 'Total': total_price
+                    }
+                    st.success(f"Booked {hotel['Hotel']} in {location} for {nights} nights. Total: R{total_price}")
     else:
         st.warning("No hotels available in this city.")
-    st.markdown('</div>', unsafe_allow_html=True)
 
-# ------------------ BUS BOOKING ------------------
+# ------------------ Bus Booking ------------------
 elif page == "Buses":
-    st.header("🚌 Book Bus Tickets")
-    st.markdown('<div class="card">', unsafe_allow_html=True)
-
-    name = st.text_input("Full Name")
+    st.header("Book Bus Tickets")
     route = st.selectbox("Select Route", buses['Route'].unique())
     travel_date = st.date_input("Travel Date", min_value=date.today())
     passengers = st.number_input("Number of Passengers", min_value=1, max_value=10, value=1)
-
-    available_buses = buses[(buses['Route']==route) & (buses['Seats Available']>=passengers)]
+    
+    available_buses = buses[(buses['Route'] == route) & (buses['Seats Available'] >= passengers)]
+    
     if not available_buses.empty:
         st.subheader("Available Buses")
-        st.dataframe(available_buses, use_container_width=True)
-        selected_time = st.selectbox("Select Departure Time", available_buses['Departure Time'])
-        if st.button("Confirm Bus Booking"):
-            if not name: st.error("Please enter your name.")
-            else:
-                price = available_buses[available_buses['Departure Time']==selected_time]['Price per Seat (ZAR)'].values[0]
-                total_price = price * passengers
-                booking = pd.DataFrame([{
-                    "Name": name, "Route": route, "Departure Time": selected_time,
-                    "Travel Date": travel_date, "Passengers": passengers, "Total Price (ZAR)": total_price
-                }])
-                booking.to_csv("bus_bookings.csv", mode="a", index=False, header=not pd.io.common.file_exists("bus_bookings.csv"))
-                st.success("✅ Bus booking confirmed!")
-                st.write(booking)
+        for idx, bus in available_buses.iterrows():
+            st.markdown(f"**Route:** {bus['Route']} | **Departure:** {bus['Departure Time']} | **Duration:** {bus['Duration (hours)']}h | **Price/Seat:** R{bus['Price per Seat (ZAR)']} | Seats: {bus['Seats Available']}")
+            if st.button(f"Book {bus['Route']} at {bus['Departure Time']}"):
+                total_price = bus['Price per Seat (ZAR)'] * passengers
+                st.session_state.bus_booking = {'Route': bus['Route'], 'Departure': bus['Departure Time'], 'Passengers': passengers, 'Total': total_price, 'Date': travel_date}
+                st.success(f"Booked {passengers} seat(s) on {bus['Route']} at {bus['Departure Time']}. Total: R{total_price}")
     else:
-        st.warning("No buses available or insufficient seats.")
-    st.markdown('</div>', unsafe_allow_html=True)
+        st.warning("No buses available for this route or insufficient seats.")
 
-# ------------------ CANCEL BOOKING ------------------
+# ------------------ Cancel Booking ------------------
 elif page == "Cancel Booking":
     st.header("❌ Cancel Booking")
-    booking_type = st.radio("Select Booking Type", ["Accommodation", "Bus"])
-
-    if booking_type == "Accommodation":
-        try:
-            df = pd.read_csv("accommodation_bookings.csv")
-            if df.empty: st.warning("No accommodation bookings found.")
-            else:
-                name_list = df["Name"].unique().tolist()
-                selected_name = st.selectbox("Select Your Name", name_list)
-                user_bookings = df[df["Name"]==selected_name]
-                st.write(user_bookings)
-                to_cancel = st.selectbox("Select Hotel to Cancel", user_bookings["Hotel"])
-                if st.button("Cancel Accommodation Booking"):
-                    df = df.drop(user_bookings[user_bookings["Hotel"]==to_cancel].index)
-                    df.to_csv("accommodation_bookings.csv", index=False)
-                    st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
-        except FileNotFoundError:
-            st.warning("No accommodation bookings file found.")
-
+    if st.session_state.accom_booking or st.session_state.bus_booking:
+        if st.session_state.accom_booking:
+            st.markdown(f"**Hotel Booking:** {st.session_state.accom_booking['Hotel']} in {st.session_state.accom_booking['City']} | Total: R{st.session_state.accom_booking['Total']}")
+            if st.button("Cancel Accommodation Booking"):
+                st.session_state.accom_booking = None
+                st.success("Accommodation booking cancelled!")
+        if st.session_state.bus_booking:
+            st.markdown(f"**Bus Booking:** {st.session_state.bus_booking['Route']} at {st.session_state.bus_booking['Departure']} | Seats: {st.session_state.bus_booking['Passengers']} | Total: R{st.session_state.bus_booking['Total']}")
+            if st.button("Cancel Bus Booking"):
+                st.session_state.bus_booking = None
+                st.success("Bus booking cancelled!")
     else:
-        try:
-            df = pd.read_csv("bus_bookings.csv")
-            if df.empty: st.warning("No bus bookings found.")
-            else:
-                name_list = df["Name"].unique().tolist()
-                selected_name = st.selectbox("Select Your Name", name_list)
-                user_bookings = df[df["Name"]==selected_name]
-                st.write(user_bookings)
-                to_cancel = st.selectbox("Select Route to Cancel", user_bookings["Route"])
-                if st.button("Cancel Bus Booking"):
-                    df = df.drop(user_bookings[user_bookings["Route"]==to_cancel].index)
-                    df.to_csv("bus_bookings.csv", index=False)
-                    st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
-        except FileNotFoundError:
+        st.warning("No bookings to cancel.")
             st.warning("No bus bookings file found.")
