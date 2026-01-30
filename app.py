@@ -214,7 +214,7 @@ accommodations = pd.DataFrame([
       'https://www.beachviewguesthouse.co.za/images/room.jpg',
       'https://www.beachviewguesthouse.co.za/images/pool.jpg',
       'https://www.beachviewguesthouse.co.za/images/restaurant.jpg']]
-], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
+, columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
 # ------------------ Bus Routes ------------------
 buses = pd.DataFrame([
     ['Johannesburg to Cape Town', '08:00', 16, 800, 20],
