@@ -228,7 +228,7 @@ if page == "Accommodations":
                 st.session_state[f"img_idx_{idx}"] = 0
 
             # Display the current image
-            # captions = ['Exterior','Lobby','Room','Pool','Restaurant']
+             captions = ['Exterior','Lobby','Room','Pool','Restaurant']
             st.image(row['Image URLs'][st.session_state[f"img_idx_{idx}"]], width=400,
                      caption=captions[st.session_state[f"img_idx_{idx}"]])
 
