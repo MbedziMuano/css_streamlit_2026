@@ -33,25 +33,13 @@ accommodations = pd.DataFrame([
 'https://th.bing.com/th/id/R.a6b3ee6c8dd3dda4c71b64acc510bbbc?rik=%2fMUgrtfD9fYqyA&riu=http%3a%2f%2fwww.olielo.com%2fwp-content%2fuploads%2f2014%2f01%2fPalazzo-Montecasino-Breakfast-Buffet.jpg&ehk=kKMas0mr6yxNKJ%2fTUJhvXvMAV9G0exjheZVSsptUaaM%3d&risl=&pid=ImgRaw&r=0' ]],
 
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
-     ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
-      'https://www.tsogosun.com/media/2850/southern-sun-lobby.jpg',
-      'https://www.tsogosun.com/media/2851/southern-sun-room.jpg',
-      'https://www.tsogosun.com/media/2852/southern-sun-pool.jpg',
-      'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
+     ['https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/6c/8d/23/hotel-exterior.jpg?w=1100&h=-1&s=1', ' https://cf.bstatic.com/xdata/images/hotel/max1024x768/297382887.jpg?k=638989db3bc9be83e03db5c3959761f58c688e7dae897e96721bca939500e649&o=', ' https://drsprnoe9nnhf.cloudfront.net/southernsun-04222022/cms/cache/v2/5de8e73f754fd.jpg/1200x630/fit;c:39,0,2558,1731/80/25bd58f7a6fc2ab8101e3213b52c5954.jpg ', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/297382887.jpg?k=638989db3bc9be83e03db5c3959761f58c688e7dae897e96721bca939500e649&o=', 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/6c/8d/25/outdoor-pool.jpg?w=700&h=-1&s=1', 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/641404290.jpg?k=86f2563c436c3dba69e6d5f4244e7088c1c6e24d1427d29ff0f82b4d1f3512b0&o=' ]],
 
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
-     ['https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-lobby.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-room.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-pool.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-restaurant.jpg']],
+     [','https://tse4.mm.bing.net/th/id/OIP.KlMNoNruOZlpi7Wsqik_pQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://www.righttravel.info/images/hotels/Radisson_Blu_Sandton_Lobby.jpg', 'https://tse4.mm.bing.net/th/id/OIP.aBoQoF8enQHJegVnbM0vfQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://media.citizen.co.za/wp-content/uploads/2022/03/the-pool-at-radisson-blu-sandton.png', 'https://tse4.mm.bing.net/th/id/OIP.F1lSmnTo2YOPgpHTXUWg0wHaD9?rs=1&pid=ImgDetMain&o=7&rm=3'  ]],
 
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
-     ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
-      'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
-      'https://www.mintrosebank.co.za/assets/images/room.jpg',
-      'https://www.mintrosebank.co.za/assets/images/pool.jpg',
-      'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
+     ['https://tse3.mm.bing.net/th/id/OIP.QgtYPP2pPk8v25kDZV9tXwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8a06b97518e8ef005634a75e58a9f1256c050dbea6f76710afcc16acf2a5af31247deab70cf8f2400b6813c8bf7a0ccd1030?fit=crop&auto=enhance,format,compress&q=80&w=720&ar=1:1', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17642441805096_2025.08.12mintrosebankjesssterkweb89.jpg', 'https://tse1.mm.bing.net/th/id/OIP.UoY0IDBQJw_WCXPxG5Cn5gHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17159455827689_hotelsmintsouthafricajohannesburgresortstheblyderestaurant02.jpg' ]],
 
     # Cape Town
     ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
