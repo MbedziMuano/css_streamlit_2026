@@ -30,8 +30,7 @@ accommodations = pd.DataFrame([
       'https://images.squarespace-cdn.com/content/v1/56ae6acce707eb68493a0759/1500397154312-HU5NSBN8AL75YS6RX2RX/Interior+Lobby.jpg',
       'https://pix10.agoda.net/hotelImages/79114/0/9e650dc2329bf94834ebb597e318365d.jpg?ca=0&ce=1&s=1024x768',
       'https://pix10.agoda.net/hotelImages/79114/-1/5786dcbf35bf28e38cd72e2dd14f06e0.jpg?ca=19&ce=1&s=1024x768',
-      'https://hiltonsandton.hotels-johannesburg.com/data/Images/OriginalPhoto/15478/1547854/1547854171/johannesburg-hilton-sandton-hotel-image-17.JPEG',
-      'https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/492628325.jpg?k=760b34bce7f616765cb6cddbb034d9020dcabc0f32911e4e0dc5172149f88196&o=',
+
       'https://www.thesyrene.co.za/wp-content/uploads/2023/05/Deluxe-Bathroom.jpg']],
 
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
