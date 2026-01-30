@@ -33,11 +33,7 @@ accommodations = pd.DataFrame([
 'https://th.bing.com/th/id/R.a6b3ee6c8dd3dda4c71b64acc510bbbc?rik=%2fMUgrtfD9fYqyA&riu=http%3a%2f%2fwww.olielo.com%2fwp-content%2fuploads%2f2014%2f01%2fPalazzo-Montecasino-Breakfast-Buffet.jpg&ehk=kKMas0mr6yxNKJ%2fTUJhvXvMAV9G0exjheZVSsptUaaM%3d&risl=&pid=ImgRaw&r=0' ]],
 
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
-     ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
-      'https://www.tsogosun.com/media/2850/southern-sun-lobby.jpg',
-      'https://www.tsogosun.com/media/2851/southern-sun-room.jpg',
-      'https://www.tsogosun.com/media/2852/southern-sun-pool.jpg',
-      'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
+     [' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/6c/8d/23/hotel-exterior.jpg?w=1100&h=-1&s=1', 'https://drsprnoe9nnhf.cloudfront.net/southernsun-04222022/cms/cache/v2/6793a83b36f36.jpg/400x265/fit/80/efb887076f15a1ba88619af2084516cd.jpg', ' https://johannesburg.hotelguide.co.za/images/crowne-plazza-johannesburg-room-786x500.jpg?t=1688153659', ' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/39/59/swimming-pool-not-heated.jpg?w=1200&h=-1&s=1', ' https://cf.bstatic.com/xdata/images/hotel/max1024x768/641404290.jpg?k=86f2563c436c3dba69e6d5f4244e7088c1c6e24d1427d29ff0f82b4d1f3512b0&o=' ]],
 
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
      ['https://tse4.mm.bing.net/th/id/OIP.KlMNoNruOZlpi7Wsqik_pQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://www.righttravel.info/images/hotels/Radisson_Blu_Sandton_Lobby.jpg', 'https://tse4.mm.bing.net/th/id/OIP.aBoQoF8enQHJegVnbM0vfQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://media.citizen.co.za/wp-content/uploads/2022/03/the-pool-at-radisson-blu-sandton.png', 'https://tse4.mm.bing.net/th/id/OIP.F1lSmnTo2YOPgpHTXUWg0wHaD9?rs=1&pid=ImgDetMain&o=7&rm=3' ]],
