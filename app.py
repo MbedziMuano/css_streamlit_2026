@@ -22,18 +22,15 @@ h2, h3 { color: #1a237e; }
 accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
-     ['https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_exterior.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_lobby.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_room.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_pool.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_restaurant.jpg']],
+     ['https://s.inyourpocket.com/gallery/johannesburg/2023/05/IMG-8667%20(1).jpg',
+      'https://s.inyourpocket.com/img/text/southafrica/johannesburg/hilton-sandton-jnbsa_sandton_-lobby.jpg',
+      'https://pix10.agoda.net/hotelImages/791/79114/79114_13112217530017730425.jpg?s=1024x768.jpg',
+      'https://www.yoninja.com/wp-content/uploads/2014/04/Hilton-Sandton-Swimming-Pool.jpg',
+      'https://www.restaurants.co.za/images/gallery/full/tradewinds_restaurant_12.jpg']],
 
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
-     ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
-      'https://www.tsogosun.com/media/2971/palazzo-lobby.jpg',
-      'https://www.tsogosun.com/media/2972/palazzo-room.jpg',
-      'https://www.tsogosun.com/media/2973/palazzo-pool.jpg',
-      'https://www.tsogosun.com/media/2974/palazzo-restaurant.jpg']],
+     ['https://www.olielo.com/wp-content/uploads/2014/01/Palazzo-Montecasino-Johannesburg.jpg', ' https://tse2.mm.bing.net/th/id/OIP.aWS4yEazVhf-Cz9v3G0CNAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://johannesburg.hotelguide.co.za/images/palazzo-montecasino-suite-786x500.jpg', 'https://edge.media.datahc.com/HI282555713.jpg',  
+'https://th.bing.com/th/id/R.a6b3ee6c8dd3dda4c71b64acc510bbbc?rik=%2fMUgrtfD9fYqyA&riu=http%3a%2f%2fwww.olielo.com%2fwp-content%2fuploads%2f2014%2f01%2fPalazzo-Montecasino-Breakfast-Buffet.jpg&ehk=kKMas0mr6yxNKJ%2fTUJhvXvMAV9G0exjheZVSsptUaaM%3d&risl=&pid=ImgRaw&r=0' ]],
 
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
      ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
