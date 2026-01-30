@@ -43,11 +43,7 @@ accommodations = pd.DataFrame([
      ['https://tse4.mm.bing.net/th/id/OIP.KlMNoNruOZlpi7Wsqik_pQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://www.righttravel.info/images/hotels/Radisson_Blu_Sandton_Lobby.jpg', 'https://tse4.mm.bing.net/th/id/OIP.aBoQoF8enQHJegVnbM0vfQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://media.citizen.co.za/wp-content/uploads/2022/03/the-pool-at-radisson-blu-sandton.png', 'https://tse4.mm.bing.net/th/id/OIP.F1lSmnTo2YOPgpHTXUWg0wHaD9?rs=1&pid=ImgDetMain&o=7&rm=3' ]],
 
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
-     ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
-      'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
-      'https://www.mintrosebank.co.za/assets/images/room.jpg',
-      'https://www.mintrosebank.co.za/assets/images/pool.jpg',
-      'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
+     ['https://tse3.mm.bing.net/th/id/OIP.QgtYPP2pPk8v25kDZV9tXwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8a06b97518e8ef005634a75e58a9f1256c050dbea6f76710afcc16acf2a5af31247deab70cf8f2400b6813c8bf7a0ccd1030?fit=crop&auto=enhance,format,compress&q=80&w=720&ar=1:1', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17642441805096_2025.08.12mintrosebankjesssterkweb89.jpg', 'https://tse1.mm.bing.net/th/id/OIP.UoY0IDBQJw_WCXPxG5Cn5gHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17159455827689_hotelsmintsouthafricajohannesburgresortstheblyderestaurant02.jpg' ]],
 
     # Cape Town
     ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
