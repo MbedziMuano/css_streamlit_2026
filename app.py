@@ -209,7 +209,7 @@ buses = pd.DataFrame([
 ], columns=['Route','Departure Time','Duration (hours)','Price per Seat (ZAR)','Seats Available'])
 
 # ------------------ App ------------------
-st.title("🚌🏨 MM BOOKINGS")
+st.title("🚌🏨 MM BOOKINGS🏨🚌")
 page = st.sidebar.selectbox("Choose a section", ["Accommodations", "Buses", "Cancel Booking"])
 
 # ------------------ ACCOMMODATION BOOKING ------------------
