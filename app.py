@@ -319,54 +319,83 @@ elif page == "Cancel Booking":
                     st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
         except FileNotFoundError:
             st.warning("No bus bookings file found.")
-# ------------------ FOOTER ------------------
+# ------------------ STICKY UNIVEN-STYLE FOOTER ------------------
 st.markdown("""
+<!-- Font Awesome -->
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
-.mm-footer {
-    background: linear-gradient(135deg, #0d1b3d, #132b6b);
-    padding: 45px 70px;
-    color: #ffffff;
-    font-size: 14px;
-    margin-top: 100px;
+html, body, [class*="css"] {
+    height: 100%;
 }
 
-.mm-footer-container {
+.stApp {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+}
+
+/* FOOTER */
+.univen-footer {
+    background: linear-gradient(135deg, #0b1c3d, #102a5c);
+    color: #ffffff;
+    padding: 45px 70px;
+    font-size: 14px;
+}
+
+.univen-footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.mm-footer-column {
+.univen-footer-column {
     flex: 1;
     min-width: 220px;
     margin-bottom: 25px;
 }
 
-.mm-footer-column h4 {
-    color: #90caf9;
-    margin-bottom: 15px;
+.univen-footer-column h4 {
+    color: #f4c430; /* UNIVEN GOLD */
+    margin-bottom: 16px;
     font-size: 16px;
 }
 
-.mm-footer-column p,
-.mm-footer-column a {
+.univen-footer-column a,
+.univen-footer-column p {
     color: #e0e0e0;
     text-decoration: none;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
 }
 
-.mm-footer-column a:hover {
+.univen-footer-column a:hover {
     color: #ffffff;
-    text-decoration: underline;
+    transform: translateX(6px);
 }
 
-.mm-social a {
-    margin-bottom: 8px;
+.univen-social a {
     display: block;
 }
 
-.mm-footer-bottom {
+.univen-social i {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.payment-icons img {
+    height: 32px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer-bottom {
     text-align: center;
     margin-top: 30px;
     border-top: 1px solid rgba(255,255,255,0.25);
@@ -376,49 +405,52 @@ st.markdown("""
 }
 </style>
 
-<div class="mm-footer">
-    <div class="mm-footer-container">
+<div class="univen-footer">
+    <div class="univen-footer-container">
 
-        <div class="mm-footer-column">
+        <div class="univen-footer-column">
             <h4>Contact</h4>
-            <p>📞 Switchboard: +27 15 962 8000</p>
-            <p>🚨 Emergency: 015 962 8603</p>
-            <p>🚑 Ambulance: 064 977 2909</p>
-            <p>✉️ Enquiries</p>
+            <p><i class="fa-solid fa-phone"></i> +27 15 962 8000</p>
+            <p><i class="fa-solid fa-triangle-exclamation"></i> Emergency: 015 962 8603</p>
+            <p><i class="fa-solid fa-ambulance"></i> 064 977 2909</p>
+            <p><i class="fa-solid fa-envelope"></i> enquiries@mmbookings.co.za</p>
         </div>
 
-        <div class="mm-footer-column">
+        <div class="univen-footer-column">
             <h4>MM BOOKINGS</h4>
-            <a href="#">About Us</a>
-            <a href="#">Customer Support</a>
-            <a href="#">Travel Information</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
+            <a href="#accommodation"><i class="fa-solid fa-hotel"></i> Accommodation</a>
+            <a href="#buses"><i class="fa-solid fa-bus"></i> Bus Tickets</a>
+            <a href="#cancel"><i class="fa-solid fa-xmark"></i> Cancel Booking</a>
+            <a href="#"><i class="fa-solid fa-file-contract"></i> Terms & Conditions</a>
+            <a href="#"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
         </div>
 
-        <div class="mm-footer-column">
+        <div class="univen-footer-column">
             <h4>Quick Links</h4>
-            <a href="#">Accommodation</a>
-            <a href="#">Bus Bookings</a>
-            <a href="#">Cancel Booking</a>
-            <a href="#">FAQs</a>
+            <a href="#"><i class="fa-solid fa-calendar"></i> Travel Calendar</a>
+            <a href="#"><i class="fa-solid fa-circle-question"></i> FAQs</a>
+            <a href="#"><i class="fa-solid fa-headset"></i> Support</a>
+            <div class="payment-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+            </div>
         </div>
 
-        <div class="mm-footer-column">
+        <div class="univen-footer-column">
             <h4>Let’s Connect</h4>
-            <div class="mm-social">
-                <a href="#">🌐 Facebook</a>
-                <a href="#">💼 LinkedIn</a>
-                <a href="#">🐦 Twitter</a>
-                <a href="#">📸 Instagram</a>
-                <a href="#">▶️ YouTube</a>
+            <div class="univen-social">
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
             </div>
         </div>
 
     </div>
 
-    <div class="mm-footer-bottom">
-        © 2026 MM BOOKINGS | All Rights Reserved
+    <div class="footer-bottom">
+        © 2026 MM BOOKINGS | Inspired by University of Venda Design
     </div>
 </div>
 """, unsafe_allow_html=True)
