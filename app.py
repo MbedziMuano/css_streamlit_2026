@@ -19,7 +19,7 @@ h2, h3 { color: #1a237e; }
 """, unsafe_allow_html=True)
 
 # ------------------ Hotels with 5 Images ------------------
-accommodations = pd.DataFrame(
+accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
      ['https://s.inyourpocket.com/gallery/johannesburg/2023/05/IMG-8667%20(1).jpg',
