@@ -22,142 +22,126 @@ h2, h3 { color: #1a237e; }
 accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
-     ['https://s.inyourpocket.com/gallery/johannesburg/2023/05/IMG-8667%20(1).jpg',
-      'https://s.inyourpocket.com/img/text/southafrica/johannesburg/hilton-sandton-jnbsa_sandton_-lobby.jpg',
-      'https://pix10.agoda.net/hotelImages/791/79114/79114_13112217530017730425.jpg?s=1024x768.jpg',
-      'https://www.yoninja.com/wp-content/uploads/2014/04/Hilton-Sandton-Swimming-Pool.jpg',
-      'https://www.restaurants.co.za/images/gallery/full/tradewinds_restaurant_12.jpg']],
+     ['https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_exterior.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_lobby.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_room.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_pool.jpg',
+      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_restaurant.jpg']],
 
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
-     ['https://www.olielo.com/wp-content/uploads/2014/01/Palazzo-Montecasino-Johannesburg.jpg', ' https://tse2.mm.bing.net/th/id/OIP.aWS4yEazVhf-Cz9v3G0CNAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://johannesburg.hotelguide.co.za/images/palazzo-montecasino-suite-786x500.jpg', 'https://edge.media.datahc.com/HI282555713.jpg',  
-'https://th.bing.com/th/id/R.a6b3ee6c8dd3dda4c71b64acc510bbbc?rik=%2fMUgrtfD9fYqyA&riu=http%3a%2f%2fwww.olielo.com%2fwp-content%2fuploads%2f2014%2f01%2fPalazzo-Montecasino-Breakfast-Buffet.jpg&ehk=kKMas0mr6yxNKJ%2fTUJhvXvMAV9G0exjheZVSsptUaaM%3d&risl=&pid=ImgRaw&r=0' ]],
+     ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
+      'https://www.tsogosun.com/media/2971/palazzo-lobby.jpg',
+      'https://www.tsogosun.com/media/2972/palazzo-room.jpg',
+      'https://www.tsogosun.com/media/2973/palazzo-pool.jpg',
+      'https://www.tsogosun.com/media/2974/palazzo-restaurant.jpg']],
 
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
-     [' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/6c/8d/23/hotel-exterior.jpg?w=1100&h=-1&s=1', 'https://drsprnoe9nnhf.cloudfront.net/southernsun-04222022/cms/cache/v2/6793a83b36f36.jpg/400x265/fit/80/efb887076f15a1ba88619af2084516cd.jpg', ' https://johannesburg.hotelguide.co.za/images/crowne-plazza-johannesburg-room-786x500.jpg?t=1688153659', ' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/39/59/swimming-pool-not-heated.jpg?w=1200&h=-1&s=1', ' https://cf.bstatic.com/xdata/images/hotel/max1024x768/641404290.jpg?k=86f2563c436c3dba69e6d5f4244e7088c1c6e24d1427d29ff0f82b4d1f3512b0&o=' ]],
+     ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
+      'https://www.tsogosun.com/media/2850/southern-sun-lobby.jpg',
+      'https://www.tsogosun.com/media/2851/southern-sun-room.jpg',
+      'https://www.tsogosun.com/media/2852/southern-sun-pool.jpg',
+      'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
 
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
-     ['https://tse4.mm.bing.net/th/id/OIP.KlMNoNruOZlpi7Wsqik_pQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://www.righttravel.info/images/hotels/Radisson_Blu_Sandton_Lobby.jpg', 'https://tse4.mm.bing.net/th/id/OIP.aBoQoF8enQHJegVnbM0vfQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://media.citizen.co.za/wp-content/uploads/2022/03/the-pool-at-radisson-blu-sandton.png', 'https://tse4.mm.bing.net/th/id/OIP.F1lSmnTo2YOPgpHTXUWg0wHaD9?rs=1&pid=ImgDetMain&o=7&rm=3' ]],
+     ['https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-lobby.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-room.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-pool.jpg',
+      'https://www.radissonhotels.com/en-us/images/sandton-restaurant.jpg']],
 
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
-     ['https://tse3.mm.bing.net/th/id/OIP.QgtYPP2pPk8v25kDZV9tXwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8a06b97518e8ef005634a75e58a9f1256c050dbea6f76710afcc16acf2a5af31247deab70cf8f2400b6813c8bf7a0ccd1030?fit=crop&auto=enhance,format,compress&q=80&w=720&ar=1:1', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17642441805096_2025.08.12mintrosebankjesssterkweb89.jpg', 'https://tse1.mm.bing.net/th/id/OIP.UoY0IDBQJw_WCXPxG5Cn5gHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17159455827689_hotelsmintsouthafricajohannesburgresortstheblyderestaurant02.jpg' ]],
+     ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
+      'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
+      'https://www.mintrosebank.co.za/assets/images/room.jpg',
+      'https://www.mintrosebank.co.za/assets/images/pool.jpg',
+      'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
 
-  # Cape Town
-['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
- [
-  'https://crushmag-online.com/wp-content/uploads/2018/07/Belmond-mount-nelson-hotel-exterior.jpg',
-  'https://tse2.mm.bing.net/th/id/OIP.XzpzNXVB87mUkq-7NRE3WAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/af/ea/93/camera.jpg?w=1200&h=-1&s=1',
-  'https://tse1.mm.bing.net/th/id/OIP.LqRmWsriuJurW1W7ze-h4AHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://crushmag-online.com/wp-content/uploads/2019/06/TABLE-CARVING-CHICKEN-mount-nelson-1x6.jpg'
- ]
-],
+    # Cape Town
+    ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
+     ['https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/exterior.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/lobby.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/room.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/pool.jpg',
+      'https://www.belmond.com/images/hotels/africa/cape-town/belmond-mount-nelson-hotel/restaurant.jpg']],
 
     ['Cape Town', 'Hyatt Regency Cape Town', 'Luxury', 4700, 5,
- [
-  'https://inafricaandbeyond.com/wp-content/uploads/2022/10/IMG_2162.jpg',
-  'https://tse3.mm.bing.net/th/id/OIP.fmrdNmjeoNKsIs7cxz2CiAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2023/08/10/0440/CPTRC-P0143-Regency-Suite-Bedroom.jpg/CPTRC-P0143-Regency-Suite-Bedroom.4x3.jpg',
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/84/f3/de/pool.jpg?w=700&h=-1&s=1',
-  'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2021/01/28/0002/Hyatt-Regency-Cape-Town-P102-Pool-Night.jpg/Hyatt-Regency-Cape-Town-P102-Pool-Night.4x3.jpg?imwidth=1920'
- ]
-],
-   ['Cape Town', 'The Cape Milner', 'Mid-range', 2600, 4,
- [
-  'https://capemilner.com/wp-content/uploads/2025/01/The-Cape-Milner-Exterior-900x604.jpg',
-  'https://capemilner.com/wp-content/uploads/2021/10/capemilner-glasslounge-3.jpg',
-  'https://tse4.mm.bing.net/th/id/OIP.QSBnG4ULhHgb-jIdHJNeHwHaEh?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://extraordinary.co.za/wp-content/uploads/2024/06/Extraordinary-The-Cape-Milner-pool-1536x1025.jpg',
-  'https://th.bing.com/th/id/R.9e111c6d23df360417ec9a29381ff7e8?rik=yAPDfbCdliaJsg&pid=ImgRaw&r=0'
- ]
-],
-   ['Cape Town', 'City Lodge V&A Waterfront', 'Mid-range', 2300, 4,
- [
-  'https://th.bing.com/th/id/R.e700f03c3e5ea8afc3969765d0c119ce?rik=fXYetTqkmav7UA&riu=http%3a%2f%2fmedia-cdn.tripadvisor.com%2fmedia%2fphoto-s%2f02%2f2e%2f45%2f76%2foutside-view-2.jpg&ehk=YJ%2fTyFClExNZS%2b7CXwiAxbdn2TW1ScosB0uRvHg8JbM%3d&risl=&pid=ImgRaw&r=0',
-  'https://www.capetown.travel/wp-content/uploads/2022/09/City-Lodge-Hotel-VA-Entrance-CI.jpg',
-  'https://city-lodge-va-waterfront.capetown-hotels-za.com/data/Photos/OriginalPhoto/12132/1213256/1213256215/cape-town-city-lodge-va-waterfront-photo-26.JPEG',
-  'https://www.capetown.travel/wp-content/uploads/2022/09/Harbour-Deck-Outdoor-Pool-1-800x800.jpg',
-  'https://city-lodge-va-waterfront.capetown-hotels-za.com/data/Pics/OriginalPhoto/16899/1689908/1689908590/city-lodge-hotel-v-a-waterfront-cape-town-pic-15.JPEG'
- ]
-],
+     ['https://www.hyatt.com/content/dam/hyatt/hyattdam/images/2019/08/02/1028/Hyatt-Cape-Town.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-lobby.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-room.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-pool.jpg',
+      'https://www.hyatt.com/content/dam/hyatt/hyatt-restaurant.jpg']],
 
-   ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3,
- [
-  'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_534,q_40,w_800/partner-images/a1/e9/945baa5950028d10c2b7ce0c772b6c5f1a4ad4af0292bf0bd4043c97527a.jpeg',
-  'https://www.capetownmagazine.com/media_lib/preview/cfa87866cbb4db4428233748aacd7da9.preview.jpg',
-  'https://tse1.mm.bing.net/th/id/OIP.LcDdPqHDx7i1WKKcQ-d4pwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://pix10.agoda.net/hotelImages/1771408/-1/7da0f2907653c01e9c2ffae157062de0.jpg?ca=0&ce=1&s=1024x768',
-  'https://tse3.mm.bing.net/th/id/OIP.yEh94A9BVOAphdxHDrTeyAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
- ]
-],
+    ['Cape Town', 'The Cape Milner', 'Mid‑range', 2600, 4,
+     ['https://www.thecapemilner.co.za/images/hotel.jpg',
+      'https://www.thecapemilner.co.za/images/lobby.jpg',
+      'https://www.thecapemilner.co.za/images/room.jpg',
+      'https://www.thecapemilner.co.za/images/pool.jpg',
+      'https://www.thecapemilner.co.za/images/restaurant.jpg']],
+
+    ['Cape Town', 'City Lodge V&A Waterfront', 'Mid‑range', 2300, 4,
+     ['https://www.citylodge.co.za/images/vawaterfront.jpg',
+      'https://www.citylodge.co.za/images/lobby.jpg',
+      'https://www.citylodge.co.za/images/room.jpg',
+      'https://www.citylodge.co.za/images/pool.jpg',
+      'https://www.citylodge.co.za/images/restaurant.jpg']],
+
+    ['Cape Town', 'Cloud 9 Boutique Hotel', 'Budget', 1500, 3,
+     ['https://cloud9hotel.co.za/images/cloud9.jpg',
+      'https://cloud9hotel.co.za/images/lobby.jpg',
+      'https://cloud9hotel.co.za/images/room.jpg',
+      'https://cloud9hotel.co.za/images/pool.jpg',
+      'https://cloud9hotel.co.za/images/restaurant.jpg']],
 
     # Durban
-   ['Durban', 'The Oyster Box', 'Luxury', 4500, 5,
- [
-  'https://www.chaloafrica.com/wp-content/uploads/2018/05/The-Oyster-Box-View.jpg',
-  'https://tse4.mm.bing.net/th/id/OIP.ILjDIVvyUffOT6aeTtsVUwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse4.mm.bing.net/th/id/OIP.WdZdyqVrTAUhf242K858TQHaE5?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://cdn.rhinoafrica.com/tmp/image-thumbnails/objects/service-providers/the-oyster-box-hotel/_img/image-thumb__34638__background-cover/the-oyster-box-hotel-facilities-pool-09.jpg',
-  'https://th.bing.com/th/id/R.0a85cf886f77a56dfcf9dff73804cf68?rik=YlJaZdAoq84a%2bg&pid=ImgRaw&r=0'
- ]
-],
-   ['Durban', 'Southern Sun Elangeni', 'Luxury', 3400, 5,
- [
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/dd/4a/99/southern-sun-elangeni.jpg?w=1200&h=-1&s=1',
-  'https://pix10.agoda.net/hotelImages/3303/0/f4bff42e1e16dcddb04085ead6d15ca2.jpeg?s=1024x768',
-  'https://cloud.tui.com/pics/hotel/resize:fill/aHR0cHM6Ly9waWNzLnR1aS5jb20vcGljcy9waWNzMTYwMHgxMjAwL3R1aS83LzdjZmIxODNmLWYxMjUtNGE1My04MjIyLWUyMzQ2YjA0Zjk2ZC5qcGc=',
-  'https://www.south-african-hotels.com/media/southern-sun-elangeni-and-maharani-11.jpg',
-  'https://pix10.agoda.net/hotelImages/7458491/0/b4acfad7e926d07db6317ebd21bd5626.jpg?ca=8&ce=1&s=1024x768'
- ]
-],
+    ['Durban', 'The Oyster Box', 'Luxury', 4500, 5,
+     ['https://www.oysterbox.co.za/images/hotel.jpg',
+      'https://www.oysterbox.co.za/images/lobby.jpg',
+      'https://www.oysterbox.co.za/images/room.jpg',
+      'https://www.oysterbox.co.za/images/pool.jpg',
+      'https://www.oysterbox.co.za/images/restaurant.jpg']],
 
-   ['Durban', 'Protea Hotel Umhlanga Ridge', 'Mid-range', 2400, 4,
- [
-  'https://th.bing.com/th/id/R.21e04c4aeae2dfb38ccd02b3a6d84ce1?rik=gDiJesNbi9Vr6Q&riu=http%3a%2f%2fa.mktgcdn.com%2fp%2ft5PhNa_VXZN258HHsi0do6KO94-yTN546Tu49Ybe9fU%2f2048x1366.jpg&ehk=SjOQPpowgTgtD%2fkH5sBqDIfsiVSnlgQFhrtT0S%2bI%2fcw%3d&risl=&pid=ImgRaw&r=0',
-  'https://images.getaroom-cdn.com/image/upload/s--tXrp1NYW--/c_limit,e_improve,fl_lossy.immutable_cache,h_940,q_auto:good,w_940/v1755802918/18408f279847d4d36b93be9e7eb2ebc435412495?_a=BACAEuEv&atc=e7cd1cfa',
-  'https://protea-hotel-by-marriott-durban-umhlanga-ridge.durban-hotels-za.com/data/Photos/OriginalPhoto/9148/914845/914845768/photo-protea-hotel-by-marriott-umhlanga-ridge-durban-81.JPEG',
-  'https://tse1.mm.bing.net/th/id/OIP.qYd9EdPBNdlXi_FOTdAt4wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse2.mm.bing.net/th/id/OIP.9SlEUGlokjdVD-o1qOjZHwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3'
- ]
-],
+    ['Durban', 'Southern Sun Elangeni', 'Luxury', 3400, 5,
+     ['https://www.tsogosun.com/media/2850/southern-sun-elangeni.jpg',
+      'https://www.tsogosun.com/media/2851/southern-sun-lobby.jpg',
+      'https://www.tsogosun.com/media/2852/southern-sun-room.jpg',
+      'https://www.tsogosun.com/media/2853/southern-sun-pool.jpg',
+      'https://www.tsogosun.com/media/2854/southern-sun-restaurant.jpg']],
 
-   ['Durban', 'Garden Court South Beach', 'Mid-range', 2100, 4,
- [
-  'https://media-cdn.holidaycheck.com/w_1280,h_720,c_fit,q_80/ugc/images/fc653542-f390-4f2e-aac5-f9de2fc92b44',
-  'https://tse2.mm.bing.net/th/id/OIP.jkA0JdWqfvEfJgSDiNQKGwHaDt?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse1.explicit.bing.net/th/id/OIP.Xew8ZVWl1CAqwqt3sUK-QgHaE5?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/04/cf/da/outdoor-swimming-pool.jpg?w=1100&h=-1&s=1',
-  'https://cf.bstatic.com/xdata/images/hotel/max1024x768/686575980.jpg?k=db1edba9bf6d4bc34dd37309b559780bbf31b88192a2d0e3ad3508d5b01cdf4e&o='
- ]
-],
+    ['Durban', 'Protea Hotel Umhlanga Ridge', 'Mid‑range', 2400, 4,
+     ['https://www.marriott.com/protea-umhlanga.jpg',
+      'https://www.marriott.com/protea-umhlanga-lobby.jpg',
+      'https://www.marriott.com/protea-umhlanga-room.jpg',
+      'https://www.marriott.com/protea-umhlanga-pool.jpg',
+      'https://www.marriott.com/protea-umhlanga-restaurant.jpg']],
+
+    ['Durban', 'Garden Court South Beach', 'Mid‑range', 2100, 4,
+     ['https://www.tsogosun.com/media/2810/garden-court-south-beach.jpg',
+      'https://www.tsogosun.com/media/2811/lobby.jpg',
+      'https://www.tsogosun.com/media/2812/room.jpg',
+      'https://www.tsogosun.com/media/2813/pool.jpg',
+      'https://www.tsogosun.com/media/2814/restaurant.jpg']],
+
     ['Durban', 'City Lodge Hotel Umhlanga Ridge', 'Budget', 1600, 3,
- [
-  'https://citylodgeridge.durbanahotel.com/data/Photos/700x500w/12778/1277802/1277802298.JPEG',
-  'https://tse2.mm.bing.net/th/id/OIP.lZRxBgaKwEQ41qbZe3VdfgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/36/54/6c/city-lodge-hotel-umhlanga.jpg?w=1200&h=-1&s=1',
-  'https://tse2.mm.bing.net/th/id/OIP.in284qTmR1A8ToUQdl7hQwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://citylodgeridge.durbanahotel.com/data/Pics/700x500w/16698/1669894/1669894088/pic-city-lodge-hotel-umhlanga-ridge-durban-13.JPEG'
- ]
-],
-    # Pretoria
- ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5,
- [
-  'https://www.south-african-hotels.com/media/sheraton-pretoria-hotel-exterior-night-main.jpg',
-  'https://tse2.mm.bing.net/th/id/OIP.UysQYjG2nGnI6wDkmAYpFwHaE3?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse3.mm.bing.net/th/id/OIP.tmuQB0NF5N4_aVemGWp-ZQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse1.mm.bing.net/th/id/OIP.8n1csOowFqBchbDAwEvKQAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://www.south-african-hotels.com/media/sheraton-pretoria-hotel-restaurant.jpg'
- ]
-],
+     ['https://www.citylodge.co.za/images/umhlanga.jpg',
+      'https://www.citylodge.co.za/images/lobby.jpg',
+      'https://www.citylodge.co.za/images/room.jpg',
+      'https://www.citylodge.co.za/images/pool.jpg',
+      'https://www.citylodge.co.za/images/restaurant.jpg']],
 
-  ['Pretoria', 'The Capital Menlyn', 'Mid‑range', 2500, 4,
- [
-  'https://www.centralsquare.co.za/wp-content/uploads/2017/03/central-square-blog-Capital-Hotel-1.jpg',
-  'https://thecapital.co.za/wp-content/uploads/2024/10/MENLYN-MAINE-RECEPTION1-scaled.jpg',
-  'https://thecapital.co.za/wp-content/uploads/2020/09/The_Capital_Menyln_Maine_PARAPLEGIC_ROOM_1.jpg',
-  'https://tse2.mm.bing.net/th/id/OIP.OwIVOHYfBxl11sC_3vsfLQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
-  'https://tse3.mm.bing.net/th/id/OIP.RnAiREN2TtsH3IG8u_9jigHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
- ]
-],
+    # Pretoria
+    ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5,
+     ['https://www.marriott.com/sheraton-pretoria.jpg',
+      'https://www.marriott.com/sheraton-pretoria-lobby.jpg',
+      'https://www.marriott.com/sheraton-pretoria-room.jpg',
+      'https://www.marriott.com/sheraton-pretoria-pool.jpg',
+      'https://www.marriott.com/sheraton-pretoria-restaurant.jpg']],
+
+    ['Pretoria', 'The Capital Menlyn', 'Mid‑range', 2500, 4,
+     ['https://www.capitalhotels.co.za/images/menlyn.jpg',
+      'https://www.capitalhotels.co.za/images/lobby.jpg',
+      'https://www.capitalhotels.co.za/images/room.jpg',
+      'https://www.capitalhotels.co.za/images/pool.jpg',
+      'https://www.capitalhotels.co.za/images/restaurant.jpg']],
 
     ['Pretoria', 'City Lodge Lynnwood', 'Mid‑range', 2300, 4,
      ['https://www.citylodge.co.za/images/lynnwood.jpg',
@@ -215,7 +199,7 @@ accommodations = pd.DataFrame([
       'https://www.beachviewguesthouse.co.za/images/room.jpg',
       'https://www.beachviewguesthouse.co.za/images/pool.jpg',
       'https://www.beachviewguesthouse.co.za/images/restaurant.jpg']]
-, columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
+], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
 # ------------------ Bus Routes ------------------
 buses = pd.DataFrame([
     ['Johannesburg to Cape Town', '08:00', 16, 800, 20],
@@ -243,7 +227,7 @@ if page == "Accommodations":
     if not available_accom.empty:
         st.subheader("Available Hotels")
         for idx, row in available_accom.iterrows():
-            st.markdown(f"{row['Hotel']} ({row['Room Type']}) - {row['Price per Night (ZAR)']} ZAR - {'⭐'*row['Rating']}")
+            st.markdown(f"**{row['Hotel']} ({row['Room Type']})** - {row['Price per Night (ZAR)']} ZAR - {'⭐'*row['Rating']}")
             st.image(row['Image URLs'], width=250, caption=['Exterior','Lobby','Room','Pool','Restaurant'])
             st.markdown("---")
 
