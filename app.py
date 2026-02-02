@@ -41,7 +41,8 @@ accommodations = pd.DataFrame(
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
      ['https://tse3.mm.bing.net/th/id/OIP.QgtYPP2pPk8v25kDZV9tXwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8a06b97518e8ef005634a75e58a9f1256c050dbea6f76710afcc16acf2a5af31247deab70cf8f2400b6813c8bf7a0ccd1030?fit=crop&auto=enhance,format,compress&q=80&w=720&ar=1:1', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17642441805096_2025.08.12mintrosebankjesssterkweb89.jpg', 'https://tse1.mm.bing.net/th/id/OIP.UoY0IDBQJw_WCXPxG5Cn5gHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17159455827689_hotelsmintsouthafricajohannesburgresortstheblyderestaurant02.jpg' ]],
 
-    # Cape Town['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
+  # Cape Town
+['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
  [
   'https://crushmag-online.com/wp-content/uploads/2018/07/Belmond-mount-nelson-hotel-exterior.jpg',
   'https://tse2.mm.bing.net/th/id/OIP.XzpzNXVB87mUkq-7NRE3WAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
