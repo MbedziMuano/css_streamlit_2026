@@ -94,11 +94,13 @@ accommodations = pd.DataFrame([
 
     # Durban
     ['Durban', 'The Oyster Box', 'Luxury', 4500, 5,
-     ['https://www.oysterbox.co.za/images/hotel.jpg',
-      'https://www.oysterbox.co.za/images/lobby.jpg',
-      'https://www.oysterbox.co.za/images/room.jpg',
-      'https://www.oysterbox.co.za/images/pool.jpg',
-      'https://www.oysterbox.co.za/images/restaurant.jpg']],
+     [
+    'https://www.chaloafrica.com/wp-content/uploads/2018/05/The-Oyster-Box-View.jpg',
+    'https://tse4.mm.bing.net/th/id/OIP.ILjDIVvyUffOT6aeTtsVUwHaE7?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://tse4.mm.bing.net/th/id/OIP.WdZdyqVrTAUhf242K858TQHaE5?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://cdn.rhinoafrica.com/tmp/image-thumbnails/objects/service-providers/the-oyster-box-hotel/_img/image-thumb__34638__background-cover/the-oyster-box-hotel-facilities-pool-09.jpg',
+    'https://th.bing.com/th/id/R.0a85cf886f77a56dfcf9dff73804cf68?rik=YlJaZdAoq84a%2bg&pid=ImgRaw&r=0'
+]],
 
     ['Durban', 'Southern Sun Elangeni', 'Luxury', 3400, 5,
      ['https://www.tsogosun.com/media/2850/southern-sun-elangeni.jpg',
