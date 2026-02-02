@@ -270,11 +270,12 @@ elif page == "Buses":
         if st.button("Confirm Bus Booking"):
             if not name: st.error("Please enter your name.")
             else:
-price = available_buses[available_buses['Departure Time']==selected_time]['Price per Seat (ZAR)'].values[0]
+                price = available_buses[available_buses['Departure Time']==selected_time]['Price per Seat (ZAR)'].values[0]
                 total_price = price * passengers
                 booking = pd.DataFrame([{
                     "Name": name, "Route": route, "Departure Time": selected_time,
-                    "Travel Date": travel_date, "Passengers": passengers, "Total Price (ZAR)": total_price  }])
+                    "Travel Date": travel_date, "Passengers": passengers, "Total Price (ZAR)": total_price
+                }])
                 booking.to_csv("bus_bookings.csv", mode="a", index=False, header=not pd.io.common.file_exists("bus_bookings.csv"))
                 st.success("✅ Bus booking confirmed!")
                 st.write(booking)
