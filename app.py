@@ -319,3 +319,106 @@ elif page == "Cancel Booking":
                     st.success(f"✅ Booking for {to_cancel} cancelled successfully!")
         except FileNotFoundError:
             st.warning("No bus bookings file found.")
+# ------------------ FOOTER ------------------
+st.markdown("""
+<style>
+.mm-footer {
+    background: linear-gradient(135deg, #0d1b3d, #132b6b);
+    padding: 45px 70px;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.mm-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mm-footer-column {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 25px;
+}
+
+.mm-footer-column h4 {
+    color: #90caf9;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.mm-footer-column p,
+.mm-footer-column a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.mm-footer-column a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.mm-social a {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.mm-footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 15px;
+    font-size: 13px;
+    color: #cfd8dc;
+}
+</style>
+
+<div class="mm-footer">
+    <div class="mm-footer-container">
+
+        <div class="mm-footer-column">
+            <h4>Contact</h4>
+            <p>📞 Switchboard: +27 15 962 8000</p>
+            <p>🚨 Emergency: 015 962 8603</p>
+            <p>🚑 Ambulance: 064 977 2909</p>
+            <p>✉️ Enquiries</p>
+        </div>
+
+        <div class="mm-footer-column">
+            <h4>MM BOOKINGS</h4>
+            <a href="#">About Us</a>
+            <a href="#">Customer Support</a>
+            <a href="#">Travel Information</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="mm-footer-column">
+            <h4>Quick Links</h4>
+            <a href="#">Accommodation</a>
+            <a href="#">Bus Bookings</a>
+            <a href="#">Cancel Booking</a>
+            <a href="#">FAQs</a>
+        </div>
+
+        <div class="mm-footer-column">
+            <h4>Let’s Connect</h4>
+            <div class="mm-social">
+                <a href="#">🌐 Facebook</a>
+                <a href="#">💼 LinkedIn</a>
+                <a href="#">🐦 Twitter</a>
+                <a href="#">📸 Instagram</a>
+                <a href="#">▶️ YouTube</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mm-footer-bottom">
+        © 2026 MM BOOKINGS | All Rights Reserved
+    </div>
+</div>
+""", unsafe_allow_html=True)
