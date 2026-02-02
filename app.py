@@ -270,36 +270,11 @@ elif page == "Buses":
         if st.button("Confirm Bus Booking"):
             if not name: st.error("Please enter your name.")
             else:
-               # ------------------ Bus Routes (Multiple Times) ------------------
-buses = pd.DataFrame([
-    # Johannesburg → Cape Town
-    ['Johannesburg to Cape Town', '06:00', 16, 800, 20],
-    ['Johannesburg to Cape Town', '10:00', 16, 850, 18],
-    ['Johannesburg to Cape Town', '18:00', 16, 900, 15],
-
-    # Cape Town → Durban
-    ['Cape Town to Durban', '07:30', 20, 950, 15],
-    ['Cape Town to Durban', '13:00', 20, 1000, 12],
-    ['Cape Town to Durban', '19:00', 20, 1050, 10],
-
-    # Durban → Pretoria
-    ['Durban to Pretoria', '05:30', 12, 700, 8],
-    ['Durban to Pretoria', '11:00', 12, 750, 5],
-    ['Durban to Pretoria', '17:30', 12, 800, 0],
-
-    # Pretoria → Port Elizabeth
-    ['Pretoria to Port Elizabeth', '06:00', 14, 850, 10],
-    ['Pretoria to Port Elizabeth', '12:00', 14, 900, 8],
-    ['Pretoria to Port Elizabeth', '20:00', 14, 950, 6],
-], columns=[
-    'Route',
-    'Departure Time',
-    'Duration (hours)',
-    'Price per Seat (ZAR)',
-    'Seats Available'
-])
-
-              #  }])
+price = available_buses[available_buses['Departure Time']==selected_time]['Price per Seat (ZAR)'].values[0]
+                total_price = price * passengers
+                booking = pd.DataFrame([{
+                    "Name": name, "Route": route, "Departure Time": selected_time,
+                    "Travel Date": travel_date, "Passengers": passengers, "Total Price (ZAR)": total_price  }])
                 booking.to_csv("bus_bookings.csv", mode="a", index=False, header=not pd.io.common.file_exists("bus_bookings.csv"))
                 st.success("✅ Bus booking confirmed!")
                 st.write(booking)
