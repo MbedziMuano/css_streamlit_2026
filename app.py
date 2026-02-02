@@ -22,39 +22,33 @@ h2, h3 { color: #1a237e; }
 accommodations = pd.DataFrame([
     # Johannesburg
     ['Johannesburg', 'Hilton Sandton', 'Luxury', 4200, 5,
-     ['https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_exterior.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_lobby.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_room.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_pool.jpg',
-      'https://www.hilton.com/imageresizer?imageUrl=https://assets.hilton.com/hilton_restaurant.jpg']],
+     ['https://s.inyourpocket.com/gallery/johannesburg/2023/05/IMG-8667%20(1).jpg',
+      'https://s.inyourpocket.com/img/text/southafrica/johannesburg/hilton-sandton-jnbsa_sandton_-lobby.jpg',
+      'https://pix10.agoda.net/hotelImages/791/79114/79114_13112217530017730425.jpg?s=1024x768.jpg',
+      'https://www.yoninja.com/wp-content/uploads/2014/04/Hilton-Sandton-Swimming-Pool.jpg',
+      'https://www.restaurants.co.za/images/gallery/full/tradewinds_restaurant_12.jpg']],
 
     ['Johannesburg', 'Palazzo Hotel Montecasino', 'Luxury', 3800, 5,
-     ['https://www.tsogosun.com/media/2970/palazzo-exterior-2.jpg',
-      'https://www.tsogosun.com/media/2971/palazzo-lobby.jpg',
-      'https://www.tsogosun.com/media/2972/palazzo-room.jpg',
-      'https://www.tsogosun.com/media/2973/palazzo-pool.jpg',
-      'https://www.tsogosun.com/media/2974/palazzo-restaurant.jpg']],
+     ['https://www.olielo.com/wp-content/uploads/2014/01/Palazzo-Montecasino-Johannesburg.jpg', ' https://tse2.mm.bing.net/th/id/OIP.aWS4yEazVhf-Cz9v3G0CNAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://johannesburg.hotelguide.co.za/images/palazzo-montecasino-suite-786x500.jpg', 'https://edge.media.datahc.com/HI282555713.jpg',  
+'https://th.bing.com/th/id/R.a6b3ee6c8dd3dda4c71b64acc510bbbc?rik=%2fMUgrtfD9fYqyA&riu=http%3a%2f%2fwww.olielo.com%2fwp-content%2fuploads%2f2014%2f01%2fPalazzo-Montecasino-Breakfast-Buffet.jpg&ehk=kKMas0mr6yxNKJ%2fTUJhvXvMAV9G0exjheZVSsptUaaM%3d&risl=&pid=ImgRaw&r=0' ]],
 
     ['Johannesburg', 'Southern Sun Rosebank', 'Mid‑range', 2500, 4,
-     ['https://www.tsogosun.com/media/2849/southern-sun-rosebank.jpg',
-      'https://www.tsogosun.com/media/2850/southern-sun-lobby.jpg',
-      'https://www.tsogosun.com/media/2851/southern-sun-room.jpg',
-      'https://www.tsogosun.com/media/2852/southern-sun-pool.jpg',
-      'https://www.tsogosun.com/media/2853/southern-sun-restaurant.jpg']],
+     [' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/6c/8d/23/hotel-exterior.jpg?w=1100&h=-1&s=1', 'https://drsprnoe9nnhf.cloudfront.net/southernsun-04222022/cms/cache/v2/6793a83b36f36.jpg/400x265/fit/80/efb887076f15a1ba88619af2084516cd.jpg', ' https://johannesburg.hotelguide.co.za/images/crowne-plazza-johannesburg-room-786x500.jpg?t=1688153659', ' https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/da/39/59/swimming-pool-not-heated.jpg?w=1200&h=-1&s=1', ' https://cf.bstatic.com/xdata/images/hotel/max1024x768/641404290.jpg?k=86f2563c436c3dba69e6d5f4244e7088c1c6e24d1427d29ff0f82b4d1f3512b0&o=' ]],
 
     ['Johannesburg', 'Radisson Blu Sandton', 'Mid‑range', 2700, 4,
-     ['https://www.radissonhotels.com/en-us/images/sandton-radisson-blu.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-lobby.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-room.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-pool.jpg',
-      'https://www.radissonhotels.com/en-us/images/sandton-restaurant.jpg']],
+     ['https://tse4.mm.bing.net/th/id/OIP.KlMNoNruOZlpi7Wsqik_pQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://www.righttravel.info/images/hotels/Radisson_Blu_Sandton_Lobby.jpg', 'https://tse4.mm.bing.net/th/id/OIP.aBoQoF8enQHJegVnbM0vfQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://media.citizen.co.za/wp-content/uploads/2022/03/the-pool-at-radisson-blu-sandton.png', 'https://tse4.mm.bing.net/th/id/OIP.F1lSmnTo2YOPgpHTXUWg0wHaD9?rs=1&pid=ImgDetMain&o=7&rm=3' ]],
 
     ['Johannesburg', 'Mint Hotel Rosebank', 'Budget', 1800, 3,
-     ['https://www.mintrosebank.co.za/assets/images/mint-hotel.jpg',
-      'https://www.mintrosebank.co.za/assets/images/lobby.jpg',
-      'https://www.mintrosebank.co.za/assets/images/room.jpg',
-      'https://www.mintrosebank.co.za/assets/images/pool.jpg',
-      'https://www.mintrosebank.co.za/assets/images/restaurant.jpg']],
+     ['https://tse3.mm.bing.net/th/id/OIP.QgtYPP2pPk8v25kDZV9tXwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA8a06b97518e8ef005634a75e58a9f1256c050dbea6f76710afcc16acf2a5af31247deab70cf8f2400b6813c8bf7a0ccd1030?fit=crop&auto=enhance,format,compress&q=80&w=720&ar=1:1', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17642441805096_2025.08.12mintrosebankjesssterkweb89.jpg', 'https://tse1.mm.bing.net/th/id/OIP.UoY0IDBQJw_WCXPxG5Cn5gHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3', 'https://wa-uploads.profitroom.com/minthotels/1525x991/17159455827689_hotelsmintsouthafricajohannesburgresortstheblyderestaurant02.jpg' ]],
+
+    # Cape Town['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
+ [
+  'https://crushmag-online.com/wp-content/uploads/2018/07/Belmond-mount-nelson-hotel-exterior.jpg',
+  'https://tse2.mm.bing.net/th/id/OIP.XzpzNXVB87mUkq-7NRE3WAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/01/af/ea/93/camera.jpg?w=1200&h=-1&s=1',
+  'https://tse1.mm.bing.net/th/id/OIP.LqRmWsriuJurW1W7ze-h4AHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3',
+  'https://crushmag-online.com/wp-content/uploads/2019/06/TABLE-CARVING-CHICKEN-mount-nelson-1x6.jpg'
+ ]],
 
     # Cape Town
     ['Cape Town', 'Belmond Mount Nelson', 'Luxury', 5000, 5,
@@ -140,75 +134,97 @@ accommodations = pd.DataFrame([
 
     # Pretoria
     ['Pretoria', 'Sheraton Pretoria Hotel', 'Luxury', 3600, 5,
-     ['https://www.marriott.com/sheraton-pretoria.jpg',
-      'https://www.marriott.com/sheraton-pretoria-lobby.jpg',
-      'https://www.marriott.com/sheraton-pretoria-room.jpg',
-      'https://www.marriott.com/sheraton-pretoria-pool.jpg',
-      'https://www.marriott.com/sheraton-pretoria-restaurant.jpg']],
+     [
+    'https://www.south-african-hotels.com/media/sheraton-pretoria-hotel-exterior-night-main.jpg',
+    'https://tse2.mm.bing.net/th/id/OIP.UysQYjG2nGnI6wDkmAYpFwHaE3?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://tse3.mm.bing.net/th/id/OIP.tmuQB0NF5N4_aVemGWp-ZQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://tse1.mm.bing.net/th/id/OIP.8n1csOowFqBchbDAwEvKQAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://www.south-african-hotels.com/media/sheraton-pretoria-hotel-restaurant.jpg'
+]],
 
     ['Pretoria', 'The Capital Menlyn', 'Mid‑range', 2500, 4,
-     ['https://www.capitalhotels.co.za/images/menlyn.jpg',
-      'https://www.capitalhotels.co.za/images/lobby.jpg',
-      'https://www.capitalhotels.co.za/images/room.jpg',
-      'https://www.capitalhotels.co.za/images/pool.jpg',
-      'https://www.capitalhotels.co.za/images/restaurant.jpg']],
+         ['Pretoria', 'The Capital Menlyn', 'Mid‑range', 2500, 4,
+     [
+         'https://www.centralsquare.co.za/wp-content/uploads/2017/03/central-square-blog-Capital-Hotel-1.jpg',
+         'https://thecapital.co.za/wp-content/uploads/2024/10/MENLYN-MAINE-RECEPTION1-scaled.jpg',
+         'https://thecapital.co.za/wp-content/uploads/2020/09/The_Capital_Menyln_Maine_PARAPLEGIC_ROOM_1.jpg',
+         'https://tse2.mm.bing.net/th/id/OIP.OwIVOHYfBxl11sC_3vsfLQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+         'https://tse3.mm.bing.net/th/id/OIP.RnAiREN2TtsH3IG8u_9jigHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
+     ]],
+    # next hotel row...],
 
     ['Pretoria', 'City Lodge Lynnwood', 'Mid‑range', 2300, 4,
-     ['https://www.citylodge.co.za/images/lynnwood.jpg',
-      'https://www.citylodge.co.za/images/lobby.jpg',
-      'https://www.citylodge.co.za/images/room.jpg',
-      'https://www.citylodge.co.za/images/pool.jpg',
-      'https://www.citylodge.co.za/images/restaurant.jpg']],
+     [
+    'https://th.bing.com/th/id/R.d31e44c0c0c9eb3107b303ff305337ca?rik=crXAQq7Q4AOrOw&riu=http%3a%2f%2fwww.royalafrica.co.za%2fwp-content%2fuploads%2f2018%2f07%2fcity-lodge-lynnwood-royal-african-discoveries-3-600x400.jpg&ehk=39C6Uy7et8vJ5fzHGKKiwsbjqcoCSVAV6oEfskZC0iA%3d&risl=&pid=ImgRaw&r=0',
+    'https://tse1.mm.bing.net/th/id/OIP.tvf_pSGak0JpsXOQFhSNbQHaF7?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://admin.clhg.com/rateimages/2019-06-07-115214amcl-single-lynwood-2jpeg.jpeg',
+    'https://th.bing.com/th/id/R.d38f0a3a90e48e7767afad8c31fd053e?rik=8FRLKxQ4USdarg&pid=ImgRaw&r=0',
+    'https://cf.bstatic.com/xdata/images/hotel/max1024x768/70705207.jpg?k=fb76c90715bd36d9ca18ce77c1bf7c7b678842711d27ba0d5430f36d9fcdec5c&o='
+]],
 
     ['Pretoria', 'Protea Hatfield', 'Budget', 1800, 3,
-     ['https://www.marriott.com/protea-hatfield.jpg',
-      'https://www.marriott.com/protea-hatfield-lobby.jpg',
-      'https://www.marriott.com/protea-hatfield-room.jpg',
-      'https://www.marriott.com/protea-hatfield-pool.jpg',
-      'https://www.marriott.com/protea-hatfield-restaurant.jpg']],
+     ['Pretoria', 'Protea Hatfield', 'Budget', 1800, 3,
+ [
+     'https://tse1.mm.bing.net/th/id/OIP.s3-BByG5eAJ_ghfe4Ech_gHaE5?rs=1&pid=ImgDetMain&o=7&rm=3',
+     'https://cf.bstatic.com/xdata/images/hotel/max500/556292641.jpg?k=bcffaabf3da4c9caf9d0b5ec3a31d6e5b607d45b2cf2f121d1f0d9dcc23011c4&o=',
+     'https://cf.bstatic.com/xdata/images/hotel/max500/573433464.jpg?k=bff106a8178ab82f242c4bfe3283e4cdd879b9fe6e181bcdeff4a292063df34e&o=&hp=1',
+     'https://tse1.mm.bing.net/th/id/OIP.p0sGXNXQ_Mew7HFQdcvaUgHaE5?rs=1&pid=ImgDetMain&o=7&rm=3',
+     'https://www.south-african-hotels.com/media/protea-hotel-hatfield-6.jpg'
+ ]],],
 
     ['Pretoria', 'Apogee Boutique Hotel & Spa', 'Luxury', 3800, 5,
-     ['https://www.apogeehotel.co.za/images/hotel.jpg',
-      'https://www.apogeehotel.co.za/images/lobby.jpg',
-      'https://www.apogeehotel.co.za/images/room.jpg',
-      'https://www.apogeehotel.co.za/images/pool.jpg',
-      'https://www.apogeehotel.co.za/images/restaurant.jpg']],
+     [
+    'https://r.profitroom.pl/apogeeboutiquehotelspa/images/gallery/thumbs/500x500/202506141216570.001_Apogee_Exterior_Views_2025.JPG?updated=2025-08-04_14-26',
+    'https://tse1.mm.bing.net/th/id/OIP.OePB_sIk79sQNWRiKMefLAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://wa-uploads.profitroom.com/apogeeboutiquehotelspa/580x460/17436817610223_room10juniorsuite1.jpg',
+    'https://emirateswoman.com/wp-content/uploads/2023/12/LApogee2.jpg',
+    'https://r.profitroom.pl/apogeeboutiquehotelspa/images/gallery/thumbs/500x500/202506141222310.005_Apogee_Dining_Areas.JPG?updated=2025-08-04_14-26'
+]],
 
     # Port Elizabeth
     ['Port Elizabeth', 'No5 Boutique Hotel By Mantis', 'Luxury', 3300, 5,
-     ['https://www.mantiscollection.com/no5-boutique-hotel.jpg',
-      'https://www.mantiscollection.com/no5-lobby.jpg',
-      'https://www.mantiscollection.com/no5-room.jpg',
-      'https://www.mantiscollection.com/no5-pool.jpg',
-      'https://www.mantiscollection.com/no5-restaurant.jpg']],
+     [
+    'https://www.ahstatic.com/photos/b417_ho_01_p_2048x1536.jpg',
+    'https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/524704968.jpg?k=240ea5e5208edfa7ab1c0df2cf5fb4497761f9a5567f1eb12eaa292b67b7626e&o=',
+    'https://tse3.mm.bing.net/th/id/OIP.Uq6WTMAsszseuueeUcaSrwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://exp.cdn-hotels.com/hotels/4000000/3180000/3176600/3176524/1921e38a_z.jpg?impolicy=fcrop&w=773&h=530&q=high',
+    'https://s3.amazonaws.com/static-webstudio-accorhotels-usa-1.wp-ha.fastbooking.com/wp-content/uploads/sites/12/2019/06/14072137/Mantis-No-5-Jazz-Room-Restaurant-min.jpg'
+]],
 
     ['Port Elizabeth', 'Radisson Blu Hotel PE', 'Luxury', 3100, 5,
-     ['https://www.radissonhotels.com/pe-radisson.jpg',
-      'https://www.radissonhotels.com/pe-lobby.jpg',
-      'https://www.radissonhotels.com/pe-room.jpg',
-      'https://www.radissonhotels.com/pe-pool.jpg',
-      'https://www.radissonhotels.com/pe-restaurant.jpg']],
+     [
+    'https://media.radissonhotels.net/image/radisson-blu-hotel-conakry/exterior/16256-124837-f82053350_4k.jpg?impolicy=HomeHero',
+    'https://media.radissonhotels.net/image/radisson-blu-scandinavia-hotel-copenhagen/lobby/16256-113960-f81080573_4k.jpg?impolicy=HomeHero',
+    'https://tse2.mm.bing.net/th/id/OIP.5K5WcunMTcJpgNWVdqhstAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://media.radissonhotels.net/image/radisson-blu-hotel-dubai-waterfront/pool--outdoor/16256-116474-f63809364_4k.jpg?impolicy=HomeHero',
+    'https://tse4.mm.bing.net/th/id/OIP.soSlPHaQ7E23VMsh9_IWjQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'
+]],
 
     ['Port Elizabeth', 'Protea PE', 'Mid‑range', 2300, 4,
-     ['https://www.marriott.com/protea-pe.jpg',
-      'https://www.marriott.com/protea-pe-lobby.jpg',
-      'https://www.marriott.com/protea-pe-room.jpg',
-      'https://www.marriott.com/protea-pe-pool.jpg',
-      'https://www.marriott.com/protea-pe-restaurant.jpg']],
+     [
+    'https://www.uniquest.co.za/wp-content/uploads/2015/09/4-Star-Protea-Hotel-Marine-Port-Elizabeth-1-600x343.jpg',
+    'https://www.hotel.co.za/images/protea-hotel-marine-room-lounge-590x390.jpg?t=1628014941',
+    'https://www.uniquest.co.za/wp-content/uploads/2015/09/4-Star-Protea-Hotel-Marine-Port-Elizabeth-2-600x343.jpg',
+    'https://www.hotel.co.za/images/protea-hotel-marine-pool-view-590x390.jpg',
+    'https://static-prod.dineplan.com/restaurant/restaurants/images/3343/cropped-protea-restaurant-1648220289.jpg?d=1652963189'
+]],
 
     ['Port Elizabeth', 'The Boardwalk Hotel', 'Mid‑range', 2400, 4,
-     ['https://www.theboardwalk.co.za/images/hotel.jpg',
-      'https://www.theboardwalk.co.za/images/lobby.jpg',
-      'https://www.theboardwalk.co.za/images/room.jpg',
-      'https://www.theboardwalk.co.za/images/pool.jpg',
-      'https://www.theboardwalk.co.za/images/restaurant.jpg']],
+     [
+    'https://freedomdestinations.co.uk/wp-content/uploads/Boardwalk-1.jpg',
+    'https://tse2.mm.bing.net/th/id/OIP.8oYBSqWaEUuWnPhieTVr-AHaDt?rs=1&pid=ImgDetMain&o=7&rm=3',
+    'https://static21.com-hotel.com/uploads/hotel-room/446323/photo/lg_the-boardwalk-hotel-convention-centre-spa-1-superior-luxury-family-room-1_17057371531.jpg',
+    'https://howtodisney.com/wp-content/uploads/2016/11/Boardwalk_Pool.jpg',
+    'https://www.south-african-hotels.com/media/the-boardwalk-hotel-7.jpg'
+]],
 
     ['Port Elizabeth', 'Beachview Guesthouse', 'Budget', 1600, 3,
-     ['https://www.beachviewguesthouse.co.za/images/guesthouse.jpg',
-      'https://www.beachviewguesthouse.co.za/images/lobby.jpg',
-      'https://www.beachviewguesthouse.co.za/images/room.jpg',
-      'https://www.beachviewguesthouse.co.za/images/pool.jpg',
-      'https://www.beachviewguesthouse.co.za/images/restaurant.jpg']]
+     [
+    'https://st.hzcdn.com/fimgs/pictures/exteriors/beachview-brown-design-group-img~fef17e1e07d1a63a_6351-1-8394826-w320-h320-b1-p10.jpg',
+    'https://travelground.imgix.net/AAEAAQAAAAAAAAAAAAAA57ec66c1a0157eb204e47911c7d0cd0b795c2902e6074ca0ace470c1edcc3c0cb222a1852daa7be3a59664c15b6b15e6b280?w=1200&h=630&fit=crop&auto=enhance,format,compress&q=80',
+    'https://cf.bstatic.com/xdata/images/hotel/max1024x768/655402101.jpg?k=186c9ed6b0e38b0cca60525aadcc3dd4f51320184303557714fdcb097513cfd5&o=',
+    'https://tse1.mm.bing.net/th/id/OIP.i5AwyrAib-s-SpvGIHeZHAHaFj?rs=1&pid=ImgDetMain&o=7&rm=3'
+]]
 ], columns=['Location','Hotel','Room Type','Price per Night (ZAR)','Rating','Image URLs'])
 # ------------------ Bus Routes ------------------
 buses = pd.DataFrame([
